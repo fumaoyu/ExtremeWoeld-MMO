@@ -1,0 +1,12 @@
+
+2024-12-19 14:51:41,423 [1] [INFO ] [GameServer] £ºGame Server Init
+2024-12-19 14:51:42,039 [1] [WARN ] [GameServer] £ºStarting Listener...
+2024-12-19 14:51:42,077 [10] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-19 14:51:42,082 [11] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-19 14:51:42,082 [6] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-19 14:51:42,083 [8] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-19 14:51:42,085 [9] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-19 14:51:42,086 [13] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-19 14:51:42,111 [7] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-19 14:51:42,111 [12] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-19 14:51:42,152 [1] [WARN ] [GameServer] £ºNetService Started

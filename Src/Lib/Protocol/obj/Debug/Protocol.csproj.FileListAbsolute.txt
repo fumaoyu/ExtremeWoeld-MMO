@@ -1,0 +1,10 @@
+D:\极世界\Unityworld\MMO\Src\Lib\Protocol\obj\Debug\Protocol.csprojAssemblyReference.cache
+D:\极世界\Unityworld\MMO\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CoreCompileInputs.cache
+D:\Unity2018项目\MMO\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CoreCompileInputs.cache
+D:\Unity2018项目\MMO\Src\Lib\Protocol\bin\Debug\Protocol.dll
+D:\Unity2018项目\MMO\Src\Lib\Protocol\bin\Debug\Protocol.pdb
+D:\Unity2018项目\MMO\Src\Lib\Protocol\bin\Debug\protobuf-net.dll
+D:\Unity2018项目\MMO\Src\Lib\Protocol\bin\Debug\protobuf-net.xml
+D:\Unity2018项目\MMO\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CopyComplete
+D:\Unity2018项目\MMO\Src\Lib\Protocol\obj\Debug\Protocol.dll
+D:\Unity2018项目\MMO\Src\Lib\Protocol\obj\Debug\Protocol.pdb

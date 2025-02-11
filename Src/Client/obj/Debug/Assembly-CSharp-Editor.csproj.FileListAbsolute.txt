@@ -1,0 +1,2 @@
+D:\Unity2018项目\MMO\Src\Client\obj\Debug\Assembly-CSharp-Editor.csprojAssemblyReference.cache
+D:\Unity2018项目\MMO\Src\Client\obj\Debug\Assembly-CSharp-Editor.csproj.CoreCompileInputs.cache

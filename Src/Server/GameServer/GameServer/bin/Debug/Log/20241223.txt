@@ -1,0 +1,100 @@
+
+2024-12-23 18:54:57,005 [1] [INFO ] [GameServer] ：Game Server Init
+2024-12-23 18:54:57,571 [1] [WARN ] [GameServer] ：Starting Listener...
+2024-12-23 18:54:57,596 [9] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 18:54:57,597 [7] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 18:54:57,597 [8] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 18:54:57,598 [11] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 18:54:57,597 [6] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 18:54:57,601 [10] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 18:54:57,634 [12] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 18:54:57,635 [13] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 18:54:57,694 [1] [WARN ] [GameServer] ：NetService Started
+2024-12-23 18:55:32,879 [3] [WARN ] [GameServer] ：Client[127.0.0.1:37542]] Connected
+2024-12-23 18:55:32,933 [3] [WARN ] [GameServer] ：Client[] DataReceived Len:25
+2024-12-23 18:55:33,044 [6] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:111111
+2024-12-23 18:55:43,944 [4] [WARN ] [GameServer] ：Client[] DataReceived Len:8
+2024-12-23 18:55:43,948 [6] [INFO ] [GameServer] ：UserGameRequest: charactetID :1 :jhm  Map:1
+2024-12-23 18:55:44,022 [6] [ERROR] [GameServer] ：Message handler exception:, 给定关键字不在字典中。, mscorlib,    在 System.ThrowHelper.ThrowKeyNotFoundException()
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 GameServer.Managers.MapManager.get_Item(Int32 key) 位置 D:\Unity2018项目\MMO\Src\Server\GameServer\GameServer\Managers\MapManager.cs:行号 38
+   在 GameServer.Services.UserService.OnGameEnter(NetConnection`1 sender, UserGameEnterRequest request) 位置 D:\Unity2018项目\MMO\Src\Server\GameServer\GameServer\Services\UserSerevice.cs:行号 183
+   在 Network.MessageDistributer`1.RaiseEvent[Tm](T sender, Tm msg) 位置 D:\Unity2018项目\MMO\Src\Lib\Common\Network\MessageDistributer.cs:行号 105
+2024-12-23 18:56:01,637 [4] [WARN ] [GameServer] ：Client[] Disconnected
+2024-12-23 18:59:43,007 [1] [INFO ] [GameServer] ：Game Server Init
+2024-12-23 18:59:43,323 [1] [INFO ] [GameServer] ：DataManager > DataManager()
+2024-12-23 19:16:48,781 [1] [INFO ] [GameServer] ：Game Server Init
+2024-12-23 19:16:48,906 [1] [INFO ] [GameServer] ：DataManager > DataManager()
+2024-12-23 19:17:25,676 [1] [INFO ] [GameServer] ：Game Server Init
+2024-12-23 19:17:25,803 [1] [INFO ] [GameServer] ：DataManager > DataManager()
+2024-12-23 19:17:58,589 [1] [INFO ] [GameServer] ：Game Server Init
+2024-12-23 19:17:58,775 [1] [INFO ] [GameServer] ：DataManager > DataManager()
+2024-12-23 19:17:58,942 [1] [INFO ] [GameServer] ：MapManager.Init > Map:1:中州
+2024-12-23 19:17:58,943 [1] [INFO ] [GameServer] ：MapManager.Init > Map:2:日落之森
+2024-12-23 19:17:58,945 [1] [INFO ] [GameServer] ：MapManager.Init > Map:3:蛮荒
+2024-12-23 19:17:58,945 [1] [INFO ] [GameServer] ：MapManager.Init > Map:4:遗落大陆
+2024-12-23 19:17:58,946 [1] [WARN ] [GameServer] ：Starting Listener...
+2024-12-23 19:17:58,990 [5] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 19:17:58,991 [8] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 19:17:58,991 [10] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 19:17:59,033 [9] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 19:17:59,034 [12] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 19:17:59,038 [6] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 19:17:59,039 [7] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 19:17:59,054 [11] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 19:17:59,167 [1] [WARN ] [GameServer] ：NetService Started
+2024-12-23 19:18:30,806 [3] [WARN ] [GameServer] ：Client[127.0.0.1:38609]] Connected
+2024-12-23 19:18:30,859 [3] [WARN ] [GameServer] ：Client[] DataReceived Len:24
+2024-12-23 19:18:30,966 [5] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:11111
+2024-12-23 19:18:35,113 [13] [WARN ] [GameServer] ：Client[] DataReceived Len:25
+2024-12-23 19:18:35,114 [5] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:111111
+2024-12-23 19:18:44,184 [3] [WARN ] [GameServer] ：Client[] DataReceived Len:8
+2024-12-23 19:18:44,187 [6] [INFO ] [GameServer] ：UserGameRequest: charactetID :1 :jhm  Map:1
+2024-12-23 19:18:44,192 [6] [INFO ] [GameServer] ：CharacterEnter: Map: 1 character: 0
+2024-12-23 19:19:40,380 [3] [WARN ] [GameServer] ：Client[] Disconnected
+2024-12-23 19:19:58,500 [15] [WARN ] [GameServer] ：Client[127.0.0.1:38663]] Connected
+2024-12-23 19:19:58,555 [16] [WARN ] [GameServer] ：Client[] DataReceived Len:25
+2024-12-23 19:19:58,556 [5] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:111111
+2024-12-23 19:20:00,872 [17] [WARN ] [GameServer] ：Client[] DataReceived Len:8
+2024-12-23 19:20:00,873 [5] [INFO ] [GameServer] ：UserGameRequest: charactetID :1 :jhm  Map:1
+2024-12-23 19:20:00,874 [5] [INFO ] [GameServer] ：CharacterEnter: Map: 1 character: 0
+2024-12-23 19:20:04,125 [17] [WARN ] [GameServer] ：Client[] DataReceived Len:8
+2024-12-23 19:20:04,125 [6] [INFO ] [GameServer] ：UserGameRequest: charactetID :1 :jhm  Map:1
+2024-12-23 19:20:04,127 [6] [INFO ] [GameServer] ：CharacterEnter: Map: 1 character: 0
+2024-12-23 19:20:17,880 [17] [WARN ] [GameServer] ：Client[] Disconnected
+2024-12-23 19:20:37,089 [17] [WARN ] [GameServer] ：Client[127.0.0.1:38682]] Connected
+2024-12-23 19:20:37,142 [17] [WARN ] [GameServer] ：Client[] DataReceived Len:25
+2024-12-23 19:20:37,143 [5] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:111111
+2024-12-23 19:20:39,897 [18] [WARN ] [GameServer] ：Client[] DataReceived Len:8
+2024-12-23 19:20:39,898 [5] [INFO ] [GameServer] ：UserGameRequest: charactetID :1 :jhm  Map:1
+2024-12-23 19:20:39,899 [5] [INFO ] [GameServer] ：CharacterEnter: Map: 1 character: 0
+2024-12-23 19:24:27,187 [18] [WARN ] [GameServer] ：Client[] Disconnected
+2024-12-23 19:29:01,616 [1] [INFO ] [GameServer] ：Game Server Init
+2024-12-23 19:29:01,836 [1] [INFO ] [GameServer] ：DataManager > DataManager()
+2024-12-23 19:29:02,038 [1] [INFO ] [GameServer] ：MapManager.Init > Map:1:中州
+2024-12-23 19:29:02,040 [1] [INFO ] [GameServer] ：MapManager.Init > Map:2:日落之森
+2024-12-23 19:29:02,040 [1] [INFO ] [GameServer] ：MapManager.Init > Map:3:蛮荒
+2024-12-23 19:29:02,040 [1] [INFO ] [GameServer] ：MapManager.Init > Map:4:遗落大陆
+2024-12-23 19:29:02,041 [1] [WARN ] [GameServer] ：Starting Listener...
+2024-12-23 19:29:02,168 [10] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 19:29:02,168 [12] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 19:29:02,169 [6] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 19:29:02,170 [11] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 19:29:02,170 [5] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 19:29:02,172 [9] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 19:29:02,174 [8] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 19:29:02,180 [7] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-23 19:29:02,277 [1] [WARN ] [GameServer] ：NetService Started
+2024-12-23 19:29:25,730 [3] [WARN ] [GameServer] ：Client[127.0.0.1:39022]] Connected
+2024-12-23 19:29:25,776 [3] [WARN ] [GameServer] ：Client[] DataReceived Len:25
+2024-12-23 19:29:25,884 [5] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:111111
+2024-12-23 19:29:28,816 [3] [WARN ] [GameServer] ：Client[] DataReceived Len:8
+2024-12-23 19:29:28,818 [5] [INFO ] [GameServer] ：UserGameRequest: charactetID :1 :jhm  Map:1
+2024-12-23 19:29:28,823 [5] [INFO ] [GameServer] ：CharacterEnter: Map: 1 character: 0
+2024-12-23 19:32:04,636 [3] [WARN ] [GameServer] ：Client[] Disconnected
+2024-12-23 19:32:56,891 [13] [WARN ] [GameServer] ：Client[127.0.0.1:39119]] Connected
+2024-12-23 19:32:56,943 [16] [WARN ] [GameServer] ：Client[] DataReceived Len:25
+2024-12-23 19:32:56,943 [5] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:111111
+2024-12-23 19:32:59,110 [13] [WARN ] [GameServer] ：Client[] DataReceived Len:8
+2024-12-23 19:32:59,111 [5] [INFO ] [GameServer] ：UserGameRequest: charactetID :1 :jhm  Map:1
+2024-12-23 19:32:59,111 [5] [INFO ] [GameServer] ：CharacterEnter: Map: 1 character: 0

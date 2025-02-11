@@ -1,0 +1,53 @@
+
+2024-12-24 16:10:41,093 [1] [INFO ] [GameServer] ：Game Server Init
+2024-12-24 16:10:41,627 [1] [INFO ] [GameServer] ：DataManager > DataManager()
+2024-12-24 16:10:41,802 [1] [INFO ] [GameServer] ：MapManager.Init > Map:1:中州
+2024-12-24 16:10:41,804 [1] [INFO ] [GameServer] ：MapManager.Init > Map:2:日落之森
+2024-12-24 16:10:41,804 [1] [INFO ] [GameServer] ：MapManager.Init > Map:3:蛮荒
+2024-12-24 16:10:41,805 [1] [INFO ] [GameServer] ：MapManager.Init > Map:4:遗落大陆
+2024-12-24 16:10:41,807 [1] [WARN ] [GameServer] ：Starting Listener...
+2024-12-24 16:10:41,914 [7] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:10:41,914 [10] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:10:41,915 [8] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:10:41,915 [9] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:10:41,915 [12] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:10:41,915 [13] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:10:41,916 [11] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:10:41,916 [6] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:10:41,919 [1] [WARN ] [GameServer] ：NetService Started
+2024-12-24 16:18:19,811 [1] [INFO ] [GameServer] ：Game Server Init
+2024-12-24 16:18:19,989 [1] [INFO ] [GameServer] ：DataManager > DataManager()
+2024-12-24 16:18:20,143 [1] [INFO ] [GameServer] ：MapManager.Init > Map:1:中州
+2024-12-24 16:18:20,145 [1] [INFO ] [GameServer] ：MapManager.Init > Map:2:日落之森
+2024-12-24 16:18:20,146 [1] [INFO ] [GameServer] ：MapManager.Init > Map:3:蛮荒
+2024-12-24 16:18:20,146 [1] [INFO ] [GameServer] ：MapManager.Init > Map:4:遗落大陆
+2024-12-24 16:18:20,146 [1] [INFO ] [GameServer] ：MapManager.Init > Map:1:中州
+2024-12-24 16:18:20,147 [1] [INFO ] [GameServer] ：MapManager.Init > Map:2:日落之森
+2024-12-24 16:18:20,147 [1] [INFO ] [GameServer] ：MapManager.Init > Map:3:蛮荒
+2024-12-24 16:18:20,147 [1] [INFO ] [GameServer] ：MapManager.Init > Map:4:遗落大陆
+2024-12-24 16:18:20,148 [1] [WARN ] [GameServer] ：Starting Listener...
+2024-12-24 16:18:20,186 [12] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:18:20,186 [5] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:18:20,186 [8] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:18:20,186 [7] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:18:20,187 [9] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:18:20,187 [10] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:18:20,187 [11] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:18:20,213 [6] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:18:20,256 [1] [WARN ] [GameServer] ：NetService Started
+2024-12-24 16:18:55,063 [1] [INFO ] [GameServer] ：Game Server Init
+2024-12-24 16:18:55,252 [1] [INFO ] [GameServer] ：DataManager > DataManager()
+2024-12-24 16:18:55,405 [1] [INFO ] [GameServer] ：MapManager.Init > Map:1:中州
+2024-12-24 16:18:55,406 [1] [INFO ] [GameServer] ：MapManager.Init > Map:2:日落之森
+2024-12-24 16:18:55,407 [1] [INFO ] [GameServer] ：MapManager.Init > Map:3:蛮荒
+2024-12-24 16:18:55,407 [1] [INFO ] [GameServer] ：MapManager.Init > Map:4:遗落大陆
+2024-12-24 16:18:55,408 [1] [WARN ] [GameServer] ：Starting Listener...
+2024-12-24 16:18:55,451 [12] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:18:55,451 [5] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:18:55,451 [6] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:18:55,456 [10] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:18:55,451 [9] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:18:55,476 [8] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:18:55,451 [7] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:18:55,453 [11] [WARN ] [GameServer] ：MessageDistribute thread start
+2024-12-24 16:18:55,519 [1] [WARN ] [GameServer] ：NetService Started

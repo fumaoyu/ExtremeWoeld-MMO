@@ -1,0 +1,38 @@
+{
+  "1": {
+    "ID": 1,
+    "Name": "中州",
+    "Type": "Normal",
+    "SubType": "Normal",
+    "PKMode": false,
+    "Resource": "MainCity",
+    "MiniMap": "zhongzhou"
+  },
+  "2": {
+    "ID": 2,
+    "Name": "日落之森",
+    "Type": "Normal",
+    "SubType": "Normal",
+    "PKMode": false,
+    "Resource": "Map01",
+    "MiniMap": "riluozhisen"
+  },
+  "3": {
+    "ID": 3,
+    "Name": "蛮荒",
+    "Type": "Normal",
+    "SubType": "Normal",
+    "PKMode": false,
+    "Resource": "Map02",
+    "MiniMap": "manhuang"
+  },
+  "4": {
+    "ID": 4,
+    "Name": "遗落大陆",
+    "Type": "Normal",
+    "SubType": "Normal",
+    "PKMode": false,
+    "Resource": "Map03",
+    "MiniMap": "yiluodalu"
+  }
+}

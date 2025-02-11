@@ -1,0 +1,148 @@
+
+2025-01-06 10:50:12,872 [1] [INFO ] [GameServer] ：Game Server Init
+2025-01-06 10:50:13,461 [1] [INFO ] [GameServer] ：DataManager > DataManager()
+2025-01-06 10:50:13,642 [1] [INFO ] [GameServer] ：MapManager.Init > Map:1:中州
+2025-01-06 10:50:13,645 [1] [INFO ] [GameServer] ：MapManager.Init > Map:2:日落之森
+2025-01-06 10:50:13,646 [1] [INFO ] [GameServer] ：MapManager.Init > Map:3:蛮荒
+2025-01-06 10:50:13,646 [1] [INFO ] [GameServer] ：MapManager.Init > Map:4:遗落大陆
+2025-01-06 10:50:13,647 [1] [WARN ] [GameServer] ：Starting Listener...
+2025-01-06 10:50:13,710 [6] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 10:50:13,710 [10] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 10:50:13,712 [11] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 10:50:13,748 [8] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 10:50:13,748 [12] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 10:50:13,748 [9] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 10:50:13,748 [7] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 10:50:13,750 [13] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 10:50:13,761 [1] [WARN ] [GameServer] ：NetService Started
+2025-01-06 10:50:43,765 [4] [WARN ] [GameServer] ：Client[127.0.0.1:52503]] Connected
+2025-01-06 10:50:43,816 [4] [WARN ] [GameServer] ：Client[] DataReceived Len:24
+2025-01-06 10:50:43,928 [6] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:11111
+2025-01-06 10:50:48,382 [4] [WARN ] [GameServer] ：Client[] DataReceived Len:25
+2025-01-06 10:50:48,382 [6] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:111111
+2025-01-06 10:51:11,287 [4] [WARN ] [GameServer] ：Client[] DataReceived Len:21
+2025-01-06 10:51:11,289 [6] [INFO ] [GameServer] ：UserCreateCharacterRequest: Name:王昭君  Class:Wizard
+2025-01-06 10:56:34,927 [14] [WARN ] [GameServer] ：Client[] Disconnected
+2025-01-06 10:57:08,677 [14] [WARN ] [GameServer] ：Client[127.0.0.1:53009]] Connected
+2025-01-06 10:57:08,730 [14] [WARN ] [GameServer] ：Client[] DataReceived Len:25
+2025-01-06 10:57:08,731 [6] [INFO ] [GameServer] ：UserLoginRequest: User:fumoayu  Pass:111111
+2025-01-06 10:57:14,163 [20] [WARN ] [GameServer] ：Client[] DataReceived Len:25
+2025-01-06 10:57:14,163 [6] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:111111
+2025-01-06 10:57:27,570 [20] [WARN ] [GameServer] ：Client[] DataReceived Len:10
+2025-01-06 10:57:27,573 [6] [INFO ] [GameServer] ：UserGameRequest: charactetID :2 :王昭君  Map:1
+2025-01-06 10:57:27,579 [6] [INFO ] [GameServer] ：CharacterEnter: Map: 1 character: 0
+2025-01-06 10:57:56,506 [20] [WARN ] [GameServer] ：Client[] Disconnected
+2025-01-06 10:59:08,984 [24] [WARN ] [GameServer] ：Client[127.0.0.1:53120]] Connected
+2025-01-06 10:59:09,047 [27] [WARN ] [GameServer] ：Client[] DataReceived Len:25
+2025-01-06 10:59:09,048 [6] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:111111
+2025-01-06 10:59:22,341 [27] [WARN ] [GameServer] ：Client[] DataReceived Len:18
+2025-01-06 10:59:22,342 [6] [INFO ] [GameServer] ：UserCreateCharacterRequest: Name:后裔  Class:Archer
+2025-01-06 11:01:16,541 [28] [WARN ] [GameServer] ：Client[] Disconnected
+2025-01-06 11:01:49,882 [28] [WARN ] [GameServer] ：Client[127.0.0.1:53320]] Connected
+2025-01-06 11:01:50,038 [28] [WARN ] [GameServer] ：Client[] DataReceived Len:25
+2025-01-06 11:01:50,039 [6] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:111111
+2025-01-06 11:02:13,506 [35] [WARN ] [GameServer] ：Client[] DataReceived Len:24
+2025-01-06 11:02:13,507 [6] [INFO ] [GameServer] ：UserCreateCharacterRequest: Name:元流之子  Class:Wizard
+2025-01-06 11:05:53,986 [33] [WARN ] [GameServer] ：Client[] Disconnected
+2025-01-06 11:06:18,549 [44] [WARN ] [GameServer] ：Client[127.0.0.1:53861]] Connected
+2025-01-06 11:06:18,700 [44] [WARN ] [GameServer] ：Client[] DataReceived Len:25
+2025-01-06 11:06:18,700 [6] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:111111
+2025-01-06 11:08:03,794 [46] [WARN ] [GameServer] ：Client[] DataReceived Len:21
+2025-01-06 11:08:03,795 [6] [INFO ] [GameServer] ：UserCreateCharacterRequest: Name:钟无艳  Class:Warrior
+2025-01-06 11:09:39,657 [50] [WARN ] [GameServer] ：Client[] Disconnected
+2025-01-06 11:10:05,569 [54] [WARN ] [GameServer] ：Client[127.0.0.1:54044]] Connected
+2025-01-06 11:10:05,617 [56] [WARN ] [GameServer] ：Client[] DataReceived Len:25
+2025-01-06 11:10:05,617 [6] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:111111
+2025-01-06 11:10:16,411 [56] [WARN ] [GameServer] ：Client[] Disconnected
+2025-01-06 11:10:40,971 [56] [WARN ] [GameServer] ：Client[127.0.0.1:54060]] Connected
+2025-01-06 11:10:41,016 [56] [WARN ] [GameServer] ：Client[] DataReceived Len:24
+2025-01-06 11:10:41,017 [6] [INFO ] [GameServer] ：UserLoginRequest: User:111111  Pass:111111
+2025-01-06 11:10:50,075 [56] [WARN ] [GameServer] ：Client[] DataReceived Len:24
+2025-01-06 11:10:50,077 [6] [INFO ] [GameServer] ：UserRegisterRequest: User:111111  Pass:111111
+2025-01-06 11:10:53,140 [57] [WARN ] [GameServer] ：Client[] DataReceived Len:24
+2025-01-06 11:10:53,140 [6] [INFO ] [GameServer] ：UserLoginRequest: User:111111  Pass:111111
+2025-01-06 11:11:19,177 [59] [WARN ] [GameServer] ：Client[] DataReceived Len:21
+2025-01-06 11:11:19,177 [6] [INFO ] [GameServer] ：UserCreateCharacterRequest: Name:王昭君  Class:Wizard
+2025-01-06 11:12:08,770 [59] [WARN ] [GameServer] ：Client[] Disconnected
+2025-01-06 11:13:05,440 [63] [WARN ] [GameServer] ：Client[127.0.0.1:54111]] Connected
+2025-01-06 11:13:05,593 [66] [WARN ] [GameServer] ：Client[] DataReceived Len:24
+2025-01-06 11:13:05,594 [6] [INFO ] [GameServer] ：UserLoginRequest: User:111111  Pass:111111
+2025-01-06 11:14:39,986 [63] [WARN ] [GameServer] ：Client[] DataReceived Len:16
+2025-01-06 11:14:39,986 [6] [INFO ] [GameServer] ：UserCreateCharacterRequest: Name:1122  Class:Warrior
+2025-01-06 11:26:13,184 [63] [WARN ] [GameServer] ：Client[] Disconnected
+2025-01-06 11:57:15,450 [1] [INFO ] [GameServer] ：Game Server Init
+2025-01-06 11:57:15,868 [1] [INFO ] [GameServer] ：DataManager > DataManager()
+2025-01-06 11:57:16,101 [1] [INFO ] [GameServer] ：MapManager.Init > Map:1:中州
+2025-01-06 11:57:16,103 [1] [INFO ] [GameServer] ：MapManager.Init > Map:2:日落之森
+2025-01-06 11:57:16,104 [1] [INFO ] [GameServer] ：MapManager.Init > Map:3:蛮荒
+2025-01-06 11:57:16,104 [1] [INFO ] [GameServer] ：MapManager.Init > Map:4:遗落大陆
+2025-01-06 11:57:16,104 [1] [WARN ] [GameServer] ：Starting Listener...
+2025-01-06 11:57:16,189 [5] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 11:57:16,189 [8] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 11:57:16,189 [12] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 11:57:16,190 [6] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 11:57:16,190 [9] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 11:57:16,190 [7] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 11:57:16,191 [10] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 11:57:16,191 [11] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 11:57:16,216 [1] [WARN ] [GameServer] ：NetService Started
+2025-01-06 11:57:19,869 [3] [WARN ] [GameServer] ：Client[127.0.0.1:2965]] Connected
+2025-01-06 11:57:19,926 [3] [WARN ] [GameServer] ：Client[] DataReceived Len:24
+2025-01-06 11:57:20,025 [5] [INFO ] [GameServer] ：UserLoginRequest: User:111111  Pass:111111
+2025-01-06 11:57:23,205 [3] [WARN ] [GameServer] ：Client[] DataReceived Len:8
+2025-01-06 11:57:23,207 [5] [INFO ] [GameServer] ：UserGameRequest: charactetID :6 :王昭君  Map:1
+2025-01-06 11:57:23,213 [5] [INFO ] [GameServer] ：CharacterEnter: Map: 1 character: 0
+2025-01-06 11:57:30,176 [3] [WARN ] [GameServer] ：Client[] Disconnected
+2025-01-06 12:56:30,661 [3] [WARN ] [GameServer] ：Client[127.0.0.1:5338]] Connected
+2025-01-06 12:56:30,708 [3] [WARN ] [GameServer] ：Client[] DataReceived Len:25
+2025-01-06 12:56:30,710 [5] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:111111
+2025-01-06 12:56:33,924 [54] [WARN ] [GameServer] ：Client[] DataReceived Len:10
+2025-01-06 12:56:33,926 [5] [INFO ] [GameServer] ：UserGameRequest: charactetID :2 :王昭君  Map:1
+2025-01-06 12:56:33,927 [5] [INFO ] [GameServer] ：CharacterEnter: Map: 1 character: 0
+2025-01-06 12:57:27,861 [54] [WARN ] [GameServer] ：Client[] Disconnected
+2025-01-06 12:58:16,129 [51] [WARN ] [GameServer] ：Client[127.0.0.1:5439]] Connected
+2025-01-06 12:58:16,179 [48] [WARN ] [GameServer] ：Client[] DataReceived Len:26
+2025-01-06 12:58:16,180 [5] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:1111111
+2025-01-06 12:58:20,260 [47] [WARN ] [GameServer] ：Client[] DataReceived Len:25
+2025-01-06 12:58:20,261 [5] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:111111
+2025-01-06 12:58:23,403 [51] [WARN ] [GameServer] ：Client[] DataReceived Len:10
+2025-01-06 12:58:23,404 [6] [INFO ] [GameServer] ：UserGameRequest: charactetID :2 :王昭君  Map:1
+2025-01-06 12:58:23,404 [6] [INFO ] [GameServer] ：CharacterEnter: Map: 1 character: 0
+2025-01-06 12:58:49,128 [51] [WARN ] [GameServer] ：Client[] Disconnected
+2025-01-06 12:59:36,995 [45] [WARN ] [GameServer] ：Client[127.0.0.1:5464]] Connected
+2025-01-06 12:59:37,049 [43] [WARN ] [GameServer] ：Client[] DataReceived Len:25
+2025-01-06 12:59:37,049 [5] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:111111
+2025-01-06 12:59:39,066 [42] [WARN ] [GameServer] ：Client[] DataReceived Len:10
+2025-01-06 12:59:39,067 [5] [INFO ] [GameServer] ：UserGameRequest: charactetID :2 :王昭君  Map:1
+2025-01-06 12:59:39,068 [5] [INFO ] [GameServer] ：CharacterEnter: Map: 1 character: 0
+2025-01-06 13:03:00,099 [42] [WARN ] [GameServer] ：Client[] Disconnected
+2025-01-06 13:10:44,863 [42] [WARN ] [GameServer] ：Client[127.0.0.1:5632]] Connected
+2025-01-06 13:10:44,915 [42] [WARN ] [GameServer] ：Client[] DataReceived Len:25
+2025-01-06 13:10:44,915 [5] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:111111
+2025-01-06 13:10:47,419 [18] [WARN ] [GameServer] ：Client[] DataReceived Len:10
+2025-01-06 13:10:47,419 [5] [INFO ] [GameServer] ：UserGameRequest: charactetID :2 :王昭君  Map:1
+2025-01-06 13:10:47,420 [5] [INFO ] [GameServer] ：CharacterEnter: Map: 1 character: 0
+2025-01-06 13:12:37,117 [18] [WARN ] [GameServer] ：Client[] Disconnected
+2025-01-06 13:12:53,803 [1] [INFO ] [GameServer] ：Game Server Init
+2025-01-06 13:12:53,949 [1] [INFO ] [GameServer] ：DataManager > DataManager()
+2025-01-06 13:12:54,106 [1] [INFO ] [GameServer] ：MapManager.Init > Map:1:中州
+2025-01-06 13:12:54,108 [1] [INFO ] [GameServer] ：MapManager.Init > Map:2:日落之森
+2025-01-06 13:12:54,108 [1] [INFO ] [GameServer] ：MapManager.Init > Map:3:蛮荒
+2025-01-06 13:12:54,108 [1] [INFO ] [GameServer] ：MapManager.Init > Map:4:遗落大陆
+2025-01-06 13:12:54,108 [1] [WARN ] [GameServer] ：Starting Listener...
+2025-01-06 13:12:54,165 [10] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 13:12:54,165 [7] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 13:12:54,165 [9] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 13:12:54,168 [6] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 13:12:54,168 [12] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 13:12:54,168 [11] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 13:12:54,168 [5] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 13:12:54,169 [8] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-06 13:12:54,214 [1] [WARN ] [GameServer] ：NetService Started
+2025-01-06 13:14:28,812 [3] [WARN ] [GameServer] ：Client[127.0.0.1:5725]] Connected
+2025-01-06 13:14:28,860 [3] [WARN ] [GameServer] ：Client[] DataReceived Len:25
+2025-01-06 13:14:28,956 [5] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:111111
+2025-01-06 13:14:31,201 [13] [WARN ] [GameServer] ：Client[] DataReceived Len:10
+2025-01-06 13:14:31,203 [5] [INFO ] [GameServer] ：UserGameRequest: charactetID :2 :王昭君  Map:1
+2025-01-06 13:14:31,208 [5] [INFO ] [GameServer] ：CharacterEnter: Map: 1 character: 0
+2025-01-06 13:14:38,160 [13] [WARN ] [GameServer] ：Client[] Disconnected

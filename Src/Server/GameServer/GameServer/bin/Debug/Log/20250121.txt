@@ -1,0 +1,25 @@
+
+2025-01-21 20:13:59,689 [1] [INFO ] [GameServer] ：Game Server Init
+2025-01-21 20:14:00,089 [1] [INFO ] [GameServer] ：DataManager > DataManager()
+2025-01-21 20:14:00,270 [1] [INFO ] [GameServer] ：MapManager.Init > Map:1:中州
+2025-01-21 20:14:00,271 [1] [INFO ] [GameServer] ：MapManager.Init > Map:2:日落之森
+2025-01-21 20:14:00,272 [1] [INFO ] [GameServer] ：MapManager.Init > Map:3:蛮荒
+2025-01-21 20:14:00,272 [1] [INFO ] [GameServer] ：MapManager.Init > Map:4:遗落大陆
+2025-01-21 20:14:00,273 [1] [WARN ] [GameServer] ：Starting Listener...
+2025-01-21 20:14:00,327 [6] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-21 20:14:00,328 [10] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-21 20:14:00,330 [13] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-21 20:14:00,330 [9] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-21 20:14:00,330 [7] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-21 20:14:00,330 [8] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-21 20:14:00,333 [12] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-21 20:14:00,333 [11] [WARN ] [GameServer] ：MessageDistribute thread start
+2025-01-21 20:14:00,392 [1] [WARN ] [GameServer] ：NetService Started
+2025-01-21 20:14:23,269 [4] [WARN ] [GameServer] ：Client[127.0.0.1:20249]] Connected
+2025-01-21 20:14:23,325 [4] [WARN ] [GameServer] ：Client[] DataReceived Len:25
+2025-01-21 20:14:23,448 [6] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:111111
+2025-01-21 20:14:25,774 [4] [WARN ] [GameServer] ：Client[] DataReceived Len:25
+2025-01-21 20:14:25,774 [7] [INFO ] [GameServer] ：UserLoginRequest: User:fumaoyu  Pass:111111
+2025-01-21 20:14:29,360 [4] [WARN ] [GameServer] ：Client[] DataReceived Len:10
+2025-01-21 20:14:29,364 [6] [INFO ] [GameServer] ：UserGameEnterRequest: charactetID :2 :王昭君  Map:1
+2025-01-21 20:14:29,369 [6] [INFO ] [GameServer] ：CharacterEnter: Map: 1 character: 1

@@ -1,0 +1,5 @@
+2025-01-14 14:06:26,547 [ 1] INFO  Unity: LoadingManager start
+2025-01-14 14:06:29,617 [ 1] INFO  Unity: DataManager > DataManager()
+2025-01-14 14:13:09,295 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2025-01-14 14:13:09,296 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+

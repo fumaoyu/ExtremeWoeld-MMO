@@ -1,0 +1,20 @@
+
+2024-12-22 17:29:19,784 [1] [INFO ] [GameServer] £ºGame Server Init
+2024-12-22 17:29:20,383 [1] [WARN ] [GameServer] £ºStarting Listener...
+2024-12-22 17:29:20,435 [13] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-22 17:29:20,435 [6] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-22 17:29:20,435 [7] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-22 17:29:20,435 [12] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-22 17:29:20,435 [11] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-22 17:29:20,435 [9] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-22 17:29:20,435 [10] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-22 17:29:20,435 [8] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-22 17:29:20,500 [1] [WARN ] [GameServer] £ºNetService Started
+2024-12-22 17:29:45,021 [3] [WARN ] [GameServer] £ºClient[127.0.0.1:41210]] Connected
+2024-12-22 17:29:45,077 [3] [WARN ] [GameServer] £ºClient[] DataReceived Len:25
+2024-12-22 17:29:45,189 [6] [INFO ] [GameServer] £ºUserLoginRequest: User:fumoayu  Pass:111111
+2024-12-22 17:29:56,364 [4] [WARN ] [GameServer] £ºClient[] DataReceived Len:25
+2024-12-22 17:29:56,364 [6] [INFO ] [GameServer] £ºUserLoginRequest: User:fumaoyu  Pass:111111
+2024-12-22 17:30:17,506 [3] [WARN ] [GameServer] £ºClient[] DataReceived Len:15
+2024-12-22 17:30:17,510 [6] [INFO ] [GameServer] £ºUserCreateCharacterRequest: Name:jhm  Class:Warrior
+2024-12-22 17:31:07,814 [15] [WARN ] [GameServer] £ºClient[] Disconnected

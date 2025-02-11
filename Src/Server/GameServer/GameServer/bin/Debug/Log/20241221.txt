@@ -1,0 +1,27 @@
+
+2024-12-21 19:07:01,065 [1] [INFO ] [GameServer] £ºGame Server Init
+2024-12-21 19:07:01,677 [1] [WARN ] [GameServer] £ºStarting Listener...
+2024-12-21 19:07:01,735 [12] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-21 19:07:01,736 [9] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-21 19:07:01,736 [6] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-21 19:07:01,736 [13] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-21 19:07:01,737 [7] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-21 19:07:01,737 [11] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-21 19:07:01,740 [8] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-21 19:07:01,741 [10] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-21 19:07:01,824 [1] [WARN ] [GameServer] £ºNetService Started
+2024-12-21 20:07:59,112 [1] [INFO ] [GameServer] £ºGame Server Init
+2024-12-21 20:07:59,375 [1] [WARN ] [GameServer] £ºStarting Listener...
+2024-12-21 20:07:59,481 [11] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-21 20:07:59,489 [5] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-21 20:07:59,489 [8] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-21 20:07:59,490 [12] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-21 20:07:59,493 [9] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-21 20:07:59,496 [6] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-21 20:07:59,496 [7] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-21 20:07:59,497 [10] [WARN ] [GameServer] £ºMessageDistribute thread start
+2024-12-21 20:07:59,583 [1] [WARN ] [GameServer] £ºNetService Started
+2024-12-21 20:08:33,682 [3] [WARN ] [GameServer] £ºClient[127.0.0.1:32080]] Connected
+2024-12-21 20:08:33,744 [3] [WARN ] [GameServer] £ºClient[] DataReceived Len:25
+2024-12-21 20:08:33,846 [5] [INFO ] [GameServer] £ºUserRegisterRequest: User:fumaoyu  Pass:111111
+2024-12-21 20:08:42,422 [3] [WARN ] [GameServer] £ºClient[] Disconnected

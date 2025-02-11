@@ -137,6 +137,7 @@ namespace Network
             }
 
             //未接收完/要结束了
+            //粘包问题
             if (this.readOffset > 0)
             {
                 long size = stream.Position - this.readOffset;

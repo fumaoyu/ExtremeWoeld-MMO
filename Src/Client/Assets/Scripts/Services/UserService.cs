@@ -7,6 +7,8 @@ using Network;
 using UnityEngine;
 
 using SkillBridge.Message;
+using Models;
+using Managers;
 
 namespace Services
 {
@@ -17,25 +19,39 @@ namespace Services
         public UnityEngine.Events.UnityAction<Result, string> OnRegister;
         public UnityEngine.Events.UnityAction<Result, string> OnCharacterCreate;
 
+        /// <summary>
+        /// 用来保存消息的类似队列
+        /// </summary>
         NetMessage pendingMessage = null;
 
         bool connected = false;
 
-        public UserService()
+        public UserService()//响应事件注册，根据服务器返回来的消息
         {
-            NetClient.Instance.OnConnect += OnGameServerConnect;
-            NetClient.Instance.OnDisconnect += OnGameServerDisconnect;
+            NetClient.Instance.OnConnect += OnGameServerConnect;//游戏服务器连上
+            NetClient.Instance.OnDisconnect += OnGameServerDisconnect;//游戏服务器断开
             MessageDistributer.Instance.Subscribe<UserLoginResponse>(this.OnUserLogin);
             MessageDistributer.Instance.Subscribe<UserRegisterResponse>(this.OnUserRegister);
             MessageDistributer.Instance.Subscribe<UserCreateCharacterResponse>(this.OnUserCreateCharacter);
-            
+            MessageDistributer.Instance.Subscribe<UserGameEnterResponse>(this.OnGameEnter);
+            MessageDistributer.Instance.Subscribe<UserGameLeaveResponse>(this.OnGameLeave);
+            MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
+
         }
 
-        public void Dispose()
+    
+
+        public void Dispose()//一般成对出现订阅和取消订阅
         {
             MessageDistributer.Instance.Unsubscribe<UserLoginResponse>(this.OnUserLogin);
             MessageDistributer.Instance.Unsubscribe<UserRegisterResponse>(this.OnUserRegister);
             MessageDistributer.Instance.Unsubscribe<UserCreateCharacterResponse>(this.OnUserCreateCharacter);
+            MessageDistributer.Instance.Unsubscribe<UserGameEnterResponse>(this.OnGameEnter);
+             MessageDistributer.Instance.Unsubscribe<UserGameLeaveResponse>(this.OnGameLeave);
+            MessageDistributer.Instance.Unsubscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
+
+
+
             NetClient.Instance.OnConnect -= OnGameServerConnect;
             NetClient.Instance.OnDisconnect -= OnGameServerDisconnect;
         }
@@ -45,6 +61,9 @@ namespace Services
 
         }
 
+        /// <summary>
+        /// 断线重连连接服务器
+        /// </summary>
         public void ConnectToServer()
         {
             Debug.Log("ConnectToServer() Start ");
@@ -59,10 +78,10 @@ namespace Services
             Log.InfoFormat("LoadingMesager::OnGameServerConnect :{0} reason:{1}", result, reason);
             if (NetClient.Instance.Connected)
             {
-                this.connected = true;
-                if(this.pendingMessage!=null)
+                this.connected = true;//连接成功
+                if(this.pendingMessage!=null)//判断连接成功前有没有要发的消息有就把消息发出去
                 {
-                    NetClient.Instance.SendMessage(this.pendingMessage);
+                    NetClient.Instance.SendMessage(this.pendingMessage);//pendingMessage类似一个队列存储消息
                     this.pendingMessage = null;
                 }
             }
@@ -138,11 +157,11 @@ namespace Services
 
             if (response.Result == Result.Success)
             {//登陆成功逻辑
-                Models.User.Instance.SetupUserInfo(response.Userinfo);
+                Models.User.Instance.SetupUserInfo(response.Userinfo);//在本地有一个user，为了不用每次都从服务器拉取数据要是数据不变的话，可以随时获取用户信息
             };
             if (this.OnLogin != null)
             {
-                this.OnLogin(response.Result, response.Errormsg);
+                this.OnLogin(response.Result, response.Errormsg);//调用事件
 
             }
         }
@@ -157,15 +176,15 @@ namespace Services
             message.Request.userRegister.User = user;
             message.Request.userRegister.Passward = psw;
 
-            if (this.connected && NetClient.Instance.Connected)
+            if (this.connected && NetClient.Instance.Connected)//判断连接有没有连上
             {
                 this.pendingMessage = null;
                 NetClient.Instance.SendMessage(message);
             }
             else
             {
-                this.pendingMessage = message;
-                this.ConnectToServer();
+                this.pendingMessage = message;//这个pendingMessage是一个类似一个队列先把消息记下来连上了再发出去
+                this.ConnectToServer();//没有连上重连
             }
         }
 
@@ -173,13 +192,18 @@ namespace Services
         {
             Debug.LogFormat("OnUserRegister:{0} [{1}]", response.Result, response.Errormsg);
 
-            if (this.OnRegister != null)
+            if (this.OnRegister != null)//事件不为空
             {
-                this.OnRegister(response.Result, response.Errormsg);
+                this.OnRegister(response.Result, response.Errormsg);//调用时间
 
             }
         }
 
+        /// <summary>
+        /// 创建角色
+        /// </summary>
+        /// <param name="name">角色名字</param>
+        /// <param name="cls">职业</param>
         public void SendCharacterCreate(string name, CharacterClass cls)
         {
             Debug.LogFormat("UserCreateCharacterRequest::name :{0} class:{1}", name, cls);
@@ -199,8 +223,34 @@ namespace Services
                 this.pendingMessage = message;
                 this.ConnectToServer();
             }
+
+            //----------------------------自己再敲一次
+            #region 自己再写一次
+            
+            //Debug.LogFormat("user:{0},djus ：{1}",name,cls);
+            //NetMessage netMessage = new NetMessage();
+            //netMessage.Request = new NetMessageRequest();
+            //netMessage.Request.createChar = new UserCreateCharacterRequest();
+            //netMessage.Request.createChar.Class = cls;
+            //netMessage.Request.createChar.Name = name;
+            //if (this.connected && NetClient.Instance.Connected)
+            //{
+            //    this.pendingMessage = null;
+            //    NetClient.Instance.SendMessage(message);
+            //}
+            //else
+            //{
+            //    this.pendingMessage = message;
+            //    this.ConnectToServer();
+            //}
+            #endregion
         }
 
+        /// <summary>
+        /// 接收
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="response"></param>
         void OnUserCreateCharacter(object sender, UserCreateCharacterResponse response)
         {
             Debug.LogFormat("OnUserCreateCharacter:{0} [{1}]", response.Result, response.Errormsg);
@@ -208,7 +258,8 @@ namespace Services
             if(response.Result == Result.Success)
             {
                 Models.User.Instance.Info.Player.Characters.Clear();
-                Models.User.Instance.Info.Player.Characters.AddRange(response.Characters);
+                Models.User.Instance.Info.Player.Characters.AddRange(response.Characters);//把返回的角色列表填进去
+
             }
 
             if (this.OnCharacterCreate != null)
@@ -216,6 +267,73 @@ namespace Services
                 this.OnCharacterCreate(response.Result, response.Errormsg);
 
             }
+            //---------------------自己再敲一次
+            #region 再敲一次
+            //if (response.Result == Result.Success)
+            //{
+
+            //}
+
+            #endregion
+        }
+        public void SendGameEnter(int characterId)
+        {
+            Debug.LogFormat("UserGameEnterRequest::characterID: {0}", characterId);
+            NetMessage netMessage = new NetMessage();
+            netMessage.Request = new NetMessageRequest();
+            netMessage.Request.gameEnter = new UserGameEnterRequest();
+            netMessage.Request.gameEnter.characterIdx = characterId;
+            if (this.connected && NetClient.Instance.Connected)
+            { 
+                this.pendingMessage = null;//等待发送的信息列表
+                NetClient.Instance.SendMessage(netMessage);
+            }
+            else
+            {
+                this.pendingMessage = netMessage;
+                this.ConnectToServer();
+            }
+        }
+
+        private void OnGameEnter(object sender, UserGameEnterResponse message)
+        {
+            Debug.LogFormat("OnEnterGame:id  {0} ", message.Result);
+
+            if (message.Result == Result.Success)
+            {
+                if (message.Character != null)
+                {
+                    ItemManager.Instance.Init(message.Character.Items);//初始化道具
+                    BagManager.Instance.Init(message.Character.Bag);//初始化背包
+                }
+            }
+        }
+
+        private void OnCharacterEnter(object sender, MapCharacterEnterResponse message)
+        {
+            //throw new NotImplementedException();
+            Debug.LogFormat("OnCharacterEnter :{0}", message.mapId);
+            NCharacterInfo info = message.Characters[0];//因为返回的就是当前一个角色
+            User.Instance.CurrentCharacter = info; ;
+            SceneManager.Instance.LoadScene(DataManager.Instance.Maps[message.mapId].Resource);
+        }
+
+        public void SendGameLeave()
+        {
+            Debug.LogFormat("UserGameLeaveRequest");
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.gameLeave = new UserGameLeaveRequest();
+            NetClient.Instance.SendMessage(message);
+
+        }
+
+        private void OnGameLeave(object sender, UserGameLeaveResponse message)
+        {
+            Debug.LogFormat("OnGameLeave: {0}  [{1}] ", message.Result, message.Errormsg);
+            //离开地图id重新设置为零
+            MapService.Instance.CurrentMapId = 0;
+            User.Instance.CurrentCharacter = null;
         }
 
 

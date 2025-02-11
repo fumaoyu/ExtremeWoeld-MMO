@@ -11,6 +11,7 @@ using System.Threading;
 
 using Network;
 using GameServer.Services;
+using GameServer.Managers;
 
 namespace GameServer
 {
@@ -22,12 +23,22 @@ namespace GameServer
 
         public bool Init()
         {
-            int Port = Properties.Settings.Default.ServerPort;
+            int Port = Properties.Settings.Default.ServerPort;//配置好的端口和ip
             network = new NetService();
             network.Init(Port);
             DBService.Instance.Init();
             UserService.Instance.Init();
             thread = new Thread(new ThreadStart(this.Update));
+            DataManager.Instance.Load();
+          //  MapManager.Instance.Init();
+
+            MapService.Instance.Init();
+            //测试
+            //SkillBridge.Message.UserRegisterRequest userLoginRequest = new SkillBridge.Message.UserRegisterRequest;
+            // userLoginRequest.Age = 42;
+
+
+            HelloService.Instance.Init();
 
             return true;
         }
@@ -37,6 +48,7 @@ namespace GameServer
             network.Start();
             running = true;
             thread.Start();
+            HelloService.Instance.Start();
         }
 
 

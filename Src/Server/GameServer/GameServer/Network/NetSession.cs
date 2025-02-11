@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using GameServer;
 using GameServer.Entities;
+using GameServer.Services;
 using SkillBridge.Message;
 
 namespace Network
@@ -15,5 +16,17 @@ namespace Network
         public TUser User { get; set; }
         public Character Character { get; set; }
         public NEntity Entity { get; set; }
+
+        /// <summary>
+        /// 客户端断开之后删掉服务器的角色,角色离开
+        /// </summary>
+        internal void Disconnected()
+        {
+            if (this.Character != null)
+            {
+                UserService.Instance.CharacterLeave(this.Character);
+            }
+
+        }
     }
 }

@@ -60,13 +60,14 @@ namespace Network
 
         public PackageHandler packageHandler = new PackageHandler(null);
 
-        void Awake()
-        {
-            running = true;
-        }
+        //void Awake()
+        //{
+        //   // running = true;
+        //}
 
         protected override void OnStart()
         {
+		   running = true;
             MessageDistributer.Instance.ThrowException = true;
         }
 
@@ -141,12 +142,13 @@ namespace Network
         }
 
         /// <summary>
-        /// Connect
+        /// Connectl连接函数前的一些准备
         /// asynchronous connect.
         /// Please use OnConnect handle connect event 
         /// </summary>
         /// <param name="retryTimes"></param>
         /// <returns></returns>
+        
         public void Connect(int times = DEF_TRY_CONNECT_TIMES)
         {
             if (this.connecting)
@@ -154,11 +156,11 @@ namespace Network
                 return;
             }
 
-            if (this.clientSocket != null)
+            if (this.clientSocket != null)//已经连接
             {
-                this.clientSocket.Close();
+                this.clientSocket.Close();//关闭连接
             }
-            if (this.address == default(IPEndPoint))
+            if (this.address == default(IPEndPoint))//IP地址位默认的抛出异常初始化ip地址
             {
                 throw new Exception("Please Init first.");
             }
@@ -166,7 +168,7 @@ namespace Network
             this.connecting = true;
             this.lastSendTime = 0;
 
-            this.DoConnect();
+            this.DoConnect();//链接
         }
 
         public void OnDestroy()
@@ -227,28 +229,30 @@ namespace Network
                 return;
             }
 
-            if (!this.Connected)
+            if (!this.Connected)//判断有没有连接如果没有
             {
                 this.receiveBuffer.Position = 0;
                 this.sendBuffer.Position = sendOffset = 0;
 
-                this.Connect();
+                this.Connect();//连接
                 Debug.Log("Connect Server before Send Message!");
                 return;
             }
 
-            sendQueue.Enqueue(message);
+            sendQueue.Enqueue(message);//发送队列，一个个发，目的防止一下子来很多消息发布出去都存入队列
         
             if (this.lastSendTime == 0)
             {
                 this.lastSendTime = Time.time;
             }
         }
-
+        /// <summary>
+        /// 真正连接的函数ttp协议
+        /// </summary>
         void DoConnect()
         {
             Debug.Log("NetClient.DoConnect on " + this.address.ToString());
-            try
+            try//连接过程中出现错误捕获信息
             {
                 if (this.clientSocket != null)
                 {
@@ -257,34 +261,36 @@ namespace Network
 
 
                 this.clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                this.clientSocket.Blocking = true;
+                this.clientSocket.Blocking = true;//阻塞状态连接通讯过程中阻塞实时等待结果
 
                 Debug.Log(string.Format("Connect[{0}] to server {1}", this.retryTimes, this.address) + "\n");
-                IAsyncResult result = this.clientSocket.BeginConnect(this.address, null, null);
-                bool success = result.AsyncWaitHandle.WaitOne(NetConnectTimeout);
+                IAsyncResult result = this.clientSocket.BeginConnect(this.address, null, null);//异步方式
+                bool success = result.AsyncWaitHandle.WaitOne(NetConnectTimeout);//等待
                 if (success)
                 {
-                    this.clientSocket.EndConnect(result);
+                    this.clientSocket.EndConnect(result);//连接成功end结束异步
                 }
             }
             catch(SocketException ex)
             {
-                if(ex.SocketErrorCode == SocketError.ConnectionRefused)
+                if(ex.SocketErrorCode == SocketError.ConnectionRefused)//服务器拒绝异常
                 {
                     this.CloseConnection(NET_ERROR_FAIL_TO_CONNECT);
                 }
                 Debug.LogErrorFormat("DoConnect SocketException:[{0},{1},{2}]{3} ", ex.ErrorCode,ex.SocketErrorCode,ex.NativeErrorCode, ex.ToString()); 
             }
-            catch (Exception e)
+            catch (Exception e)//常规异常
             {
                 Debug.Log("DoConnect Exception:" + e.ToString() + "\n");
             }
 
-            if (this.clientSocket.Connected)
+            if (this.clientSocket.Connected)//再次判断连接状态是否成功
             {
-                this.clientSocket.Blocking = false;
+                this.clientSocket.Blocking = false;//阻塞模式设为fals非阻塞
                 this.RaiseConnected(0, "Success");
             }
+            ////////阻塞和非阻塞区别：
+            ///阻塞发一个消息服务器不返回会一直等待卡死，非阻塞不会
             else
             {
                 this.retryTimes++;
@@ -293,7 +299,7 @@ namespace Network
                     this.RaiseConnected(1, "Cannot connect to server");
                 }
             }
-            this.connecting = false;
+            this.connecting = false;//连接过程完成不在连接中了一个标记；
         }
 
         bool KeepConnect()

@@ -9,7 +9,7 @@ option cc_enable_arenas = true;
 //
 //  Basic Defines
 //
-////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////枚举
 enum RESULT
 {
 	SUCCESS = 0;
@@ -46,6 +46,13 @@ enum ENTITY_EVENT
 	JUMP = 4;
 }
 
+enum ITEM_TYPE
+{
+   NORMAL=0;//普通
+   NATERIAL=1;
+   TASK=2;//任务道具	
+}
+
 message NUserInfo {
 	int32 id = 1;
 	NPlayerInfo player = 2;
@@ -65,7 +72,19 @@ message NCharacterInfo {
 	int32 level = 6;
 	int32 mapId = 7;
 	NEntity entity = 8;
+    int32 gold=9;//金币
+
+	repeated NItemInfo Items=10;//道具信息,丢这里方便用户登录的时候就可以知道自己身上所有的道具
+	NBagInfo Bag=11;//背包
+	int32 diamond=12;//钻石
 }
+
+message  NItemInfo
+{
+	int32 id=1;//单个道具id
+	int32 count =2;//单个道具数量
+}
+
 
 message NVector3
 {
@@ -80,6 +99,12 @@ message NVector3
 //
 ////////////////////////////////////////////////////////////////
 
+message NBagInfo
+{
+    int32 Unlocked=1;//解锁的格子
+    bytes Items=2;//背包道具，可变长
+
+}
 
 message NEntity {
 	int32 id = 1;
@@ -102,14 +127,14 @@ message NEntitySync {
 //  Messages
 //
 ////////////////////////////////////////////////////////////////
-
+//根协议一个协议客户端服务端同时使用偷懒
 message NetMessage{
-	NetMessageRequest Request = 1;
-	NetMessageResponse Response = 2;
+	NetMessageRequest Request = 1;//请求客户端填充
+	NetMessageResponse Response = 2;//响应服务端填充
 }
-
+//客户端请求
 message NetMessageRequest{
-	UserRegisterRequest userRegister = 1;
+	UserRegisterRequest userRegister = 1;//后面的值为可选的想发哪个发哪个其他的可以为空
 	UserLoginRequest userLogin = 2;
 	UserCreateCharacterRequest createChar = 3;
 	UserGameEnterRequest gameEnter = 4;
@@ -119,8 +144,14 @@ message NetMessageRequest{
 
 	MapEntitySyncRequest mapEntitySync = 8;
 	MapTeleportRequest mapTeleport = 9;
-}
+	BagSaveRequest bagSave=10;
 
+	ItemBuyRequest itemBuy=11;
+
+	//ItemEquipRequest itemEquip=12;
+	//FirstTestRequest firstRequest=10;
+}
+//服务端响应
 message NetMessageResponse{
 	UserRegisterResponse userRegister = 1;
 	UserLoginResponse userLogin = 2;
@@ -132,7 +163,13 @@ message NetMessageResponse{
 	MapCharacterLeaveResponse mapCharacterLeave = 7;
 
 	MapEntitySyncResponse mapEntitySync = 8;
-	
+	BagSaveResponse bagSave = 9;
+	ItemBuyResponse itemBuy=11;
+}
+message FirstTestRequest {
+	string helloworld = 1;
+	string datas = 2;
+
 }
 
 
@@ -140,6 +177,7 @@ message NetMessageResponse{
 message UserLoginRequest {
 	string user = 1;
 	string passward = 2;
+
 }
 
 message UserLoginResponse {
@@ -153,6 +191,7 @@ message UserRegisterRequest
 {
 	string user = 1;
 	string passward = 2;
+	int32 age=3;
 }
 
 message UserRegisterResponse {
@@ -180,6 +219,8 @@ message UserGameEnterRequest
 message UserGameEnterResponse {
 	RESULT result = 1;
 	string errormsg = 2;
+	
+	NCharacterInfo character=3;//用户进入游戏返回角色所有的信息
 }
 
 message UserGameLeaveRequest
@@ -223,4 +264,31 @@ message MapEntitySyncResponse
 message MapTeleportRequest
 {
 	int32 teleporterId = 1;
+}
+
+message ItemBuyRequest
+{
+   int32 shopId=1;
+   int32 shopItemId=2;
+   int32 buyCount=3;
+   //int32 payType=3;	
+}
+
+message ItemBuyResponse
+{
+	RESULT result=1;
+	string errormsg=2;
+}
+
+//背包保存发送客户端用
+message 	BagSaveRequest
+{
+      NBagInfo BagInfo=1;	
+}
+
+//响应服务端用
+message BagSaveResponse
+{
+    RESULT result=1;
+	string errormsg =2;	
 }

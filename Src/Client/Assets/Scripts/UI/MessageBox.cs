@@ -21,17 +21,17 @@ class MessageBox
 public enum MessageBoxType
 {
     /// <summary>
-    /// Information Dialog with OK button
+    /// Information Dialog with OK button信息提示
     /// </summary>
     Information = 1,
 
     /// <summary>
-    /// Confirm Dialog whit OK and Cancel buttons
+    /// Confirm Dialog whit OK and Cancel buttons确认提示
     /// </summary>
     Confirm = 2,
 
     /// <summary>
-    /// Error Dialog with OK buttons
+    /// Error Dialog with OK buttons错误提示
     /// </summary>
     Error = 3
 }

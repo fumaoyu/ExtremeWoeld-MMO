@@ -3,6 +3,10 @@ using Common;
 
 namespace Network
 {
+    /// <summary>
+    /// 消息分发器
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class MessageDispatch<T> : Singleton<MessageDispatch<T>>
     {
         public void Dispatch(T sender, SkillBridge.Message.NetMessageResponse message)
@@ -14,7 +18,9 @@ namespace Network
             if (message.gameLeave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gameLeave); }
             if (message.mapCharacterEnter != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapCharacterEnter); }
             if (message.mapCharacterLeave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapCharacterLeave); }
-            if (message.mapEntitySync != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapEntitySync); }   
+            if (message.mapEntitySync != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapEntitySync); }
+            if (message.itemBuy != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.itemBuy); }
+            //if (message.bagSave!= null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.bagSave); }
         }
 
         public void Dispatch(T sender, SkillBridge.Message.NetMessageRequest message)
@@ -27,7 +33,9 @@ namespace Network
             if (message.mapCharacterEnter != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapCharacterEnter); }
             if (message.mapEntitySync != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapEntitySync); }
             if (message.mapTeleport != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapTeleport); }
-            
+            if (message.itemBuy != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.itemBuy); }
+            // if (message.firstRequest != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.firstRequest); }
+            //if (message.bagSave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.bagSave); }
         }
     }
 }

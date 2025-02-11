@@ -15,7 +15,7 @@ public class UILogin : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        UserService.Instance.OnLogin = OnLogin;
+        UserService.Instance.OnLogin = OnLogin;//这个事件
     }
 
 

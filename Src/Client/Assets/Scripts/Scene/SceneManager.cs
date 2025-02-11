@@ -10,7 +10,8 @@ public class SceneManager : MonoSingleton<SceneManager>
     // Use this for initialization
     protected override void OnStart()
     {
-        
+        //SkillBridge.Message.UserRegisterRequest userLoginRequest = new SkillBridge.Message.UserRegisterRequest();
+        // userLoginRequest.Age = 42;
     }
 
     // Update is called once per frame

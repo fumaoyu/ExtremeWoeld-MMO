@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3696443369182581595}
   - component: {fileID: 8568994634451343656}
   - component: {fileID: 7788798576924822557}
-  - component: {fileID: 4941166801672554520}
+  - component: {fileID: 5255487579269901477}
   m_Layer: 5
   m_Name: UIQuestItem
   m_TagString: Untagged
@@ -96,9 +96,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_HighlightedColor: {r: 0.6509434, g: 0.62944996, b: 0.62944996, a: 1}
+    m_PressedColor: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
+    m_DisabledColor: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -112,7 +112,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 8568994634451343656}
---- !u!114 &4941166801672554520
+--- !u!114 &5255487579269901477
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,14 +121,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2171332260777438788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8426b071cb5c04243b9f02cf7e0e9279, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ec2eb872824f8444b506fbf13118002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
   title: {fileID: 4978133200695432910}
   background: {fileID: 8568994634451343656}
   normalBg: {fileID: 21300000, guid: 589eb524b434341c1ba130764aa8068f, type: 3}
-  selectedBg: {fileID: 21300000, guid: 5ae4dda9e8452412f8e86f2b21b8944e, type: 3}
+  selectedBg: {fileID: 21300000, guid: 128ee11ef4a214ababec88da318cc78f, type: 3}
 --- !u!1 &3108392087743188922
 GameObject:
   m_ObjectHideFlags: 0

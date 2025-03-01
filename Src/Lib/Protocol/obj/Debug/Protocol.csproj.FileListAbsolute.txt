@@ -8,4 +8,3 @@ D:\Unity2018项目\MMO\Src\Lib\Protocol\bin\Debug\protobuf-net.xml
 D:\Unity2018项目\MMO\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CopyComplete
 D:\Unity2018项目\MMO\Src\Lib\Protocol\obj\Debug\Protocol.dll
 D:\Unity2018项目\MMO\Src\Lib\Protocol\obj\Debug\Protocol.pdb
-D:\Unity2018项目\MMO\Src\Lib\Protocol\obj\Debug\Protocol.csprojAssemblyReference.cache

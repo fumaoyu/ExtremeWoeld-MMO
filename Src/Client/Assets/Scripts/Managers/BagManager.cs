@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using UnityEditor.PackageManager.Requests;
+//using UnityEditor.PackageManager.Requests;
 
 namespace Managers
 {
@@ -94,6 +94,46 @@ namespace Managers
                 }
             }
             return this.NBagInfo;
+        }
+
+        public void AddItem(int id, int count)
+        {
+            ushort addcount = (ushort)count;
+            for (int i = 0; i < this.Items.Length; i++)
+            {
+                if (this.Items[i].ItemId == id)
+                {
+                    ushort canadd = (ushort)(DataManager.Instance.Items[id].StackLimit - this.Items[i].Count);
+                    if (canadd > addcount)//增加的数量小于格子还可以增加的数量限制
+                    {
+                        this.Items[i].Count += addcount;
+                        addcount = 0;
+                        break;
+                    }
+                    else//大于放入下一关格子
+                    {
+                        this.Items[i].Count += canadd;
+                        addcount -= canadd;
+                    }
+                }
+            }
+            if (addcount > 0)//放入后面空格//这里课程教的还不是很严谨，万一有很多东西大于两个格子最大限制，可以改造为循环语句
+            {
+                for (int i=0; i < Items.Length;i ++)
+                {
+                    if (this.Items[i].ItemId == 0)
+                    {
+                        this.Items[i].ItemId = (ushort)(id);
+                        this.Items[i].Count = addcount;
+                        break;
+                    }
+                }
+            }
+        }
+
+        internal void RemoveItem(int id, int count)
+        {
+            //throw new NotImplementedException();
         }
     }
 }

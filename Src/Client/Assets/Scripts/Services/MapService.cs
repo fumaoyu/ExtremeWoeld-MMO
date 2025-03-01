@@ -12,7 +12,7 @@ using UnityEngine;
 
 namespace Services
 {
-    class MapService : Singleton<MapService>
+    class MapService : Singleton<MapService>,IDisposable
     {
         public MapService()//响应事件注册，根据服务器返回来的消息
         {
@@ -46,10 +46,11 @@ namespace Services
             foreach (var characters in message.Characters)
             {
 
-                if ( User.Instance .CurrentCharacter ==null|| User.Instance.CurrentCharacter.Id == characters.Id)
+                if ( User.Instance .CurrentCharacter ==null|| (characters.Type==CharacterType.Player&& User.Instance.CurrentCharacter.Id == characters.Id))
                 {
                     //当前角色切换地图
                     User.Instance.CurrentCharacter = characters;//为什么一样还要赋值，为了安全一下万一服务器数据发生改变，刷新一下数据
+                    Debug.LogFormat("OnMapCharacterEnter当前玩家信息名字：{0} ID：{1}", characters.Name, characters.Id);
                 }
                 CharacterManager.Instance.AddCharacter(characters);//把服务器返回的所有角色交给角色管理器
             }
@@ -79,11 +80,11 @@ namespace Services
 
         private void OnMapCharacterLeave(object sender, MapCharacterLeaveResponse message)
         {
-            Debug.LogFormat("OnMapCharacterLeave: charID :{0}", message.characterId);
+            Debug.LogFormat("OnMapCharacterLeave: charID :{0}", message.entityId);
 
-            if (message.characterId != User.Instance.CurrentCharacter.Id)//如果是其他玩家离开，清除其他玩家
+            if (message.entityId != User.Instance.CurrentCharacter.EntityId)//如果是其他玩家离开，清除其他玩家
             {
-                CharacterManager.Instance.RemoveCharacter(message.characterId);
+                CharacterManager.Instance.RemoveCharacter(message.entityId);
             }
             else
                 CharacterManager.Instance.Clear();//当前玩家全部清除

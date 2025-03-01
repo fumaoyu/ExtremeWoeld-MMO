@@ -113,7 +113,7 @@ namespace Network
                 }
                 else
                 {
-                    Log.Warning("No handler subscribed for {0}" + msg.ToString());
+                    Log.Warning("No handler subscribed for{0}" + msg.ToString());
                 }
             }
         }

@@ -101,7 +101,7 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
         if (entityController != null)
         {
             entityController.entity = character;
-            entityController.isPlayer = character.IsPlayer;
+            entityController.isPlayer = character.IsCurrentPlayer;
         }
         PlayerInputController playerInputController = go.GetComponent<PlayerInputController>();
         if (playerInputController != null)

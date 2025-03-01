@@ -8,6 +8,7 @@ using SkillBridge.Message;
 using ProtoBuf;
 using Services;
 using Managers;
+using Network;
 
 public class LoadingManager : MonoBehaviour {
 
@@ -32,7 +33,7 @@ public class LoadingManager : MonoBehaviour {
         UILogin.SetActive(false);
         yield return new WaitForSeconds(2f);
         UILoading.SetActive(true);
-        yield return new WaitForSeconds(1f);
+        //yield return new WaitForSeconds(1f);
         UITips.SetActive(false);
 
         yield return DataManager.Instance.LoadData();//数据加载
@@ -41,15 +42,29 @@ public class LoadingManager : MonoBehaviour {
         MapService.Instance.Init();
         UserService.Instance.Init();
         TaskManager.Instance.Init();
+        StatusService.Instance.Init();
+        ShopManager.Instance.Init();
 
+        FriendService.Instance.Init();
+
+        TeamService.Instance.Init();
         // Fake Loading Simulate
-        for (float i = 50; i < 100;)
+        for (float j = 0; j <100;j++)
         {
-            i += Random.Range(0.1f, 1.5f);
-            progressBar.value = i;
-            yield return new WaitForEndOfFrame();
+            float i = Random.Range(0f,0.03f);
+            if (progressBar.value >= 1)
+            {
+                progressBar.value = 1;
+                yield return new WaitForSeconds(0.3f);
+                break;
+            }
+           // Debug.Log("j" + j);
+                //Debug.Log("进度条" + );
+                //Debug.Log("进度条" + );
+            progressBar.value += i;
+            progressText.text =((int)(progressBar.value*1000)/10)+","+ ((int)(progressBar.value * 1000)%10) + "%";
+            yield return new WaitForSeconds(Random.Range(0f,0.2f));
         }
-
         UILoading.SetActive(false);
         UILogin.SetActive(true);
         yield return null;

@@ -10,7 +10,7 @@ public class UIBag : MonoBehaviour
 {
 
     public Text money;
-    
+
     /// <summary>
     /// 钻石预留自己加
     /// </summary>
@@ -23,7 +23,7 @@ public class UIBag : MonoBehaviour
 
     public GameObject UnlockedP;
     // Start is called before the first frame update
-    void  Start()
+    void Start()
     {
         if (slots == null)
         {
@@ -38,8 +38,8 @@ public class UIBag : MonoBehaviour
     }
 
     IEnumerator InitBags()
-    { 
-    
+    {
+
         for (int i = 0; i < BagManager.Instance.Items.Length; i++)//已经解锁的
         {
             var item = BagManager.Instance.Items[i];
@@ -58,7 +58,7 @@ public class UIBag : MonoBehaviour
             //var ui = go.GetComponent<UIIconItem>();
             //var der = ItemManager.Instance.Items[item.ItemId].Define;
         }
-        yield return null; 
+        yield return null;
     }
 
     public void SetTitle(string title)
@@ -69,6 +69,9 @@ public class UIBag : MonoBehaviour
     public void OnReset()
     {
         BagManager.Instance.Reset();
+
+        this.Clear();
+        StartCoroutine(InitBags());
     }
 
     public void OnclickClose()
@@ -76,9 +79,19 @@ public class UIBag : MonoBehaviour
         UIManager.Instance.Close(this.GetType());
     }
 
+    void Clear()
+    {
+        for (int i = 0; i < slots.Count; i++)
+        {
+            if (slots[i].transform.childCount > 0)
+            {
+                Destroy(slots[i].transform.GetChild(0).gameObject);
+            }
+        }
+    }
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

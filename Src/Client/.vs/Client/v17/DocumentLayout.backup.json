@@ -3,28 +3,128 @@
   "WorkspaceRootPath": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\ui\\guild\\uiguildlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\guild\\uiguildlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\ui\\guild\\uiguilditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\guild\\uiguilditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|d:\\unity2018\u9879\u76EE\\mmo\\src\\client\\assets\\scripts\\ui\\guild\\uiguildmemberitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\guild\\uiguildmemberitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\services\\guildservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\services\\guildservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\ui\\guild\\uiguildpopcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\guild\\uiguildpopcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|d:\\unity2018\u9879\u76EE\\mmo\\src\\client\\assets\\scripts\\managers\\guildmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\guildmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|d:\\unity2018\u9879\u76EE\\mmo\\src\\client\\assets\\scripts\\ui\\guild\\uiguild.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\guild\\uiguild.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\ui\\guild\\uiguildinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\guild\\uiguildinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\ui\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\ui\\uimain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\uimain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\services\\teamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\services\\teamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\ui\\bag\\uibag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\bag\\uibag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\ui\\listview\\listview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\listview\\listview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\managers\\bagmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\bagmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\ui\\friend\\uifriend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\friend\\uifriend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\ui\\team\\uiteam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\team\\uiteam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\gamedefine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamedefine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\ui\\shop\\uishop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\shop\\uishop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\managers\\shopmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\shopmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\services\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\services\\itemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\network\\netclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\network\\netclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\ui\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\utilities\\monosingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\monosingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\ui\\shop\\uishopitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\shop\\uishopitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\managers\\bagmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\bagmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\managers\\itemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\itemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\services\\statusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\services\\statusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\managers\\statusmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\statusmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\ui\\bag\\uibag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\bag\\uibag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\ui\\tabview\\tabbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\tabview\\tabbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\ui\\tabview\\tabview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\tabview\\tabview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\ui\\uimain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\uimain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\gameobject\\playerinputcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,12 +135,8 @@
       "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\loadingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|d:\\unity2018\u9879\u76EE\\mmo\\src\\client\\assets\\scripts\\assets\\resloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\assets\\resloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assets\\resloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\ui\\tabview\\tabview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\tabview\\tabview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\managers\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,10 +145,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\BOXOPHOBIC\\Polyverse Skies\\Core\\Editor\\PolyverseSkiesCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\BOXOPHOBIC\\Polyverse Skies\\Core\\Editor\\PolyverseSkiesCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|d:\\unity2018\u9879\u76EE\\mmo\\src\\client\\assets\\scripts\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -69,14 +161,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\models\\bagitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\models\\bagitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\ui\\tabview\\tabbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\tabview\\tabbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\GameObject\\EntityController.cs.meta||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -131,10 +215,6 @@
       "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\uicharacterselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\utilities\\monosingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\monosingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\assets\\scripts\\entities\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12F44184-A422-5F27-22E6-507969043F15}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\entities\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -166,7 +246,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -174,117 +254,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UIBag.cs",
-              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Bag\\UIBag.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Bag\\UIBag.cs",
-              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Bag\\UIBag.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\Bag\\UIBag.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAnwBgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T06:27:26.068Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NetClient.cs",
-              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Network\\NetClient.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Network\\NetClient.cs",
-              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Network\\NetClient.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Network\\NetClient.cs",
-              "ViewState": "AgIAAIIBAAAAAAAAAAAnwJ0BAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T07:45:51.649Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PlayerInputController.cs",
-              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\GameObject\\PlayerInputController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameObject\\PlayerInputController.cs",
-              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\GameObject\\PlayerInputController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameObject\\PlayerInputController.cs",
-              "ViewState": "AgIAAIgAAAAAAAAAAADgv4wAAABvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T06:01:13.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Resloader.cs",
-              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Assets\\Resloader.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Assets\\Resloader.cs",
-              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Assets\\Resloader.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Assets\\Resloader.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T08:35:57.462Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TabView.cs",
-              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\TabView\\TabView.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\TabView\\TabView.cs",
-              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\TabView\\TabView.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\TabView\\TabView.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAD4vyEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T14:00:10.665Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "UIMainCity.cs",
-              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\UIMainCity.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UIMainCity.cs",
-              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\UIMainCity.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\UIMainCity.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T03:50:43.28Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UIManager.cs",
-              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\UIManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UIManager.cs",
-              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\UIManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\UIManager.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAnwEYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T06:28:51.878Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Services\\UserService.cs",
-              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Services\\UserService.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Services\\UserService.cs",
-              "ViewState": "AgIAACcBAAAAAAAAAAAnwDIBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T06:11:42.846Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UIMain.cs",
-              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\UIMain.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UIMain.cs",
-              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\UIMain.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\UIMain.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAnwCwAAAAAAAAAAAAAAA==",
+              "Title": "UIGuildItem.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Guild\\UIGuildItem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Guild\\UIGuildItem.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Guild\\UIGuildItem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Guild\\UIGuildItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T06:25:27.071Z",
+              "WhenOpened": "2025-02-27T10:08:01.955Z",
               "EditorCaption": ""
             },
             {
@@ -293,57 +271,333 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UIGuildList.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Guild\\UIGuildList.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Guild\\UIGuildList.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Guild\\UIGuildList.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Guild\\UIGuildList.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAewC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T09:33:56.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UIGuildMemberItem.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Guild\\UIGuildMemberItem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Guild\\UIGuildMemberItem.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Guild\\UIGuildMemberItem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Guild\\UIGuildMemberItem.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T07:24:04.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "GuildService.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Services\\GuildService.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Services\\GuildService.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Services\\GuildService.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Services\\GuildService.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAAO4AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T08:17:57.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GuildManager.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Managers\\GuildManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\GuildManager.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Managers\\GuildManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\GuildManager.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T05:20:05.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UIGuildPopCreate.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Guild\\UIGuildPopCreate.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Guild\\UIGuildPopCreate.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Guild\\UIGuildPopCreate.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Guild\\UIGuildPopCreate.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAMwDcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T08:20:11.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UIGuild.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Guild\\UIGuild.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Guild\\UIGuild.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Guild\\UIGuild.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Guild\\UIGuild.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T12:21:01.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UIGuildInfo.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Guild\\UIGuildInfo.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Guild\\UIGuildInfo.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Guild\\UIGuildInfo.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Guild\\UIGuildInfo.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T09:02:20.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UIManager.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\UIManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UIManager.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\UIManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\UIManager.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T06:28:51.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Services\\UserService.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Services\\UserService.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Services\\UserService.cs",
+              "ViewState": "AgIAADIBAAAAAAAAAAAAAEgBAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T06:11:42.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UITeam.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Team\\UITeam.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Team\\UITeam.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Team\\UITeam.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Team\\UITeam.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T10:42:29.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ListView.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\ListView\\ListView.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\ListView\\ListView.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\ListView\\ListView.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\ListView\\ListView.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAADYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T10:28:33.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TeamService.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Services\\TeamService.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Services\\TeamService.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Services\\TeamService.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Services\\TeamService.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T10:42:52.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UIFriend.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Friend\\UIFriend.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Friend\\UIFriend.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Friend\\UIFriend.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Friend\\UIFriend.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFwAAACLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T10:43:27.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GameDefine.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\GameDefine.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameDefine.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\GameDefine.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameDefine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T09:25:07.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UIShop.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Shop\\UIShop.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Shop\\UIShop.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Shop\\UIShop.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Shop\\UIShop.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAnwEUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T12:45:01.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UIShopItem.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Shop\\UIShopItem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Shop\\UIShopItem.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Shop\\UIShopItem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Shop\\UIShopItem.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAnwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T12:44:11.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ItemService.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Services\\ItemService.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Services\\ItemService.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Services\\ItemService.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Services\\ItemService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:16:47.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ShopManager.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Managers\\ShopManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\ShopManager.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Managers\\ShopManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\ShopManager.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T07:15:48.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ItemManager.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Managers\\ItemManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\ItemManager.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Managers\\ItemManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\ItemManager.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAswD8AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T11:49:51.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Item.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Models\\Item.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Models\\Item.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Models\\Item.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Models\\Item.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T03:13:01.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "BagManager.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Managers\\BagManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\BagManager.cs",
               "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Managers\\BagManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Managers\\BagManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAnwAsAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAcwHQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T06:30:29.663Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-11T06:30:29.663Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LoadingManager.cs",
-              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\LoadingManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\LoadingManager.cs",
-              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\LoadingManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\LoadingManager.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 25,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Models\\User.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Models\\User.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Models\\User.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAcwBsAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T06:57:39.041Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-08T03:43:59.428Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "PolyverseSkiesCreate.cs",
-              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\BOXOPHOBIC\\Polyverse Skies\\Core\\Editor\\PolyverseSkiesCreate.cs",
-              "RelativeDocumentMoniker": "Assets\\BOXOPHOBIC\\Polyverse Skies\\Core\\Editor\\PolyverseSkiesCreate.cs",
-              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\BOXOPHOBIC\\Polyverse Skies\\Core\\Editor\\PolyverseSkiesCreate.cs",
-              "RelativeToolTip": "Assets\\BOXOPHOBIC\\Polyverse Skies\\Core\\Editor\\PolyverseSkiesCreate.cs",
+              "DocumentIndex": 26,
+              "Title": "StatusManager.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Managers\\StatusManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\StatusManager.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Managers\\StatusManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\StatusManager.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T11:24:05.866Z"
+              "WhenOpened": "2025-02-12T11:23:55.128Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DataManager.cs",
-              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Managers\\DataManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\DataManager.cs",
-              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Managers\\DataManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Managers\\DataManager.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAD4vzMAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 20,
+              "Title": "MonoSingleton.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Utilities\\MonoSingleton.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\MonoSingleton.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Utilities\\MonoSingleton.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Utilities\\MonoSingleton.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T07:27:05.972Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-31T09:49:14.854Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
+              "Title": "NetClient.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Network\\NetClient.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Network\\NetClient.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Network\\NetClient.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Network\\NetClient.cs",
+              "ViewState": "AgIAACYBAAAAAAAAAAAnwDEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T07:45:51.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "StatusService.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Services\\StatusService.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Services\\StatusService.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Services\\StatusService.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Services\\StatusService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T11:26:35.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
               "Title": "EntityController.cs.meta",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\GameObject\\EntityController.cs.meta",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameObject\\EntityController.cs.meta",
@@ -355,32 +609,125 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Item.cs",
-              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Models\\Item.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Models\\Item.cs",
-              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Models\\Item.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Models\\Item.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAyAAAAAAAAAA==",
+              "DocumentIndex": 27,
+              "Title": "UIBag.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Bag\\UIBag.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Bag\\UIBag.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\Bag\\UIBag.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\Bag\\UIBag.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAnwBwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T03:13:01.101Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-11T06:27:26.068Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 43,
+              "Title": "UIMainCity.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\UIMainCity.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UIMainCity.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\UIMainCity.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\UIMainCity.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T03:50:43.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "TabView.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\TabView\\TabView.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\TabView\\TabView.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\TabView\\TabView.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\TabView\\TabView.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAD4vyYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T14:00:10.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Resloader.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Assets\\Resloader.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Assets\\Resloader.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Assets\\Resloader.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Assets\\Resloader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T08:35:57.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
               "Title": "TabButton.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\TabView\\TabButton.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\TabView\\TabButton.cs",
               "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\TabView\\TabButton.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\TabView\\TabButton.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAD4vxsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-11T02:30:54.828Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 31,
+              "Title": "PlayerInputController.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\GameObject\\PlayerInputController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameObject\\PlayerInputController.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\GameObject\\PlayerInputController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameObject\\PlayerInputController.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAADgv4wAAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T06:01:13.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "UIMain.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\UIMain.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UIMain.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\UIMain.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\UIMain.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAnwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T06:25:27.071Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "LoadingManager.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\LoadingManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LoadingManager.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\LoadingManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LoadingManager.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T06:57:39.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "PolyverseSkiesCreate.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\BOXOPHOBIC\\Polyverse Skies\\Core\\Editor\\PolyverseSkiesCreate.cs",
+              "RelativeDocumentMoniker": "Assets\\BOXOPHOBIC\\Polyverse Skies\\Core\\Editor\\PolyverseSkiesCreate.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\BOXOPHOBIC\\Polyverse Skies\\Core\\Editor\\PolyverseSkiesCreate.cs",
+              "RelativeToolTip": "Assets\\BOXOPHOBIC\\Polyverse Skies\\Core\\Editor\\PolyverseSkiesCreate.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T11:24:05.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "DataManager.cs",
+              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Managers\\DataManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\DataManager.cs",
+              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Managers\\DataManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\DataManager.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAD4vzMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T07:27:05.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
               "Title": "UIIconItem.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\UIIconItem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UIIconItem.cs",
@@ -392,7 +739,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 36,
               "Title": "Test.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Test.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Test.cs",
@@ -404,7 +751,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 37,
               "Title": "UIWorldElement.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\UIWorldElement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UIWorldElement.cs",
@@ -416,7 +763,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 39,
               "Title": "BagItem.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Models\\BagItem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Models\\BagItem.cs",
@@ -428,7 +775,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 41,
               "Title": "CharacterManager.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Managers\\CharacterManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\CharacterManager.cs",
@@ -440,19 +787,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Models\\User.cs",
-              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Models\\User.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Models\\User.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAawBYAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-08T03:43:59.428Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 44,
               "Title": "UIMiniMap.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\MiniMap\\UIMiniMap.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\MiniMap\\UIMiniMap.cs",
@@ -464,7 +799,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 42,
               "Title": "SceneManager.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Scene\\SceneManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Scene\\SceneManager.cs",
@@ -475,7 +810,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 45,
               "Title": "MainPlayerCamera.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\GameObject\\MainPlayerCamera.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameObject\\MainPlayerCamera.cs",
@@ -487,7 +822,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 46,
               "Title": "Entity.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Entities\\Entity.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Entities\\Entity.cs",
@@ -499,7 +834,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 47,
               "Title": "MiniMapManager.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Managers\\MiniMapManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\MiniMapManager.cs",
@@ -511,7 +846,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 48,
               "Title": "GameObjectManager.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Managers\\GameObjectManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\GameObjectManager.cs",
@@ -523,7 +858,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 49,
               "Title": "UIWorldElementManager.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\UIWorldElementManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UIWorldElementManager.cs",
@@ -535,7 +870,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 50,
               "Title": "MapService.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Services\\MapService.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Services\\MapService.cs",
@@ -547,7 +882,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 51,
               "Title": "EntityController.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\GameObject\\EntityController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameObject\\EntityController.cs",
@@ -559,7 +894,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 52,
               "Title": "UICharacterSelect.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\UICharacterSelect.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UICharacterSelect.cs",
@@ -571,19 +906,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "MonoSingleton.cs",
-              "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Utilities\\MonoSingleton.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\MonoSingleton.cs",
-              "ToolTip": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Utilities\\MonoSingleton.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Utilities\\MonoSingleton.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T09:49:14.854Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 53,
               "Title": "Character.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\Entities\\Character.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Entities\\Character.cs",
@@ -595,7 +918,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 54,
               "Title": "GameObjectTool.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\GameObject\\GameObjectTool.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameObject\\GameObjectTool.cs",
@@ -607,7 +930,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 55,
               "Title": "UICharInfo.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\UICharInfo.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UICharInfo.cs",
@@ -619,7 +942,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 56,
               "Title": "UILogin.cs",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\Scripts\\UI\\UILogin.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UILogin.cs",
@@ -631,7 +954,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 57,
               "Title": "log4net.xml",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\References\\log4net.xml",
               "RelativeDocumentMoniker": "Assets\\References\\log4net.xml",
@@ -643,7 +966,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 58,
               "Title": "protobuf-net.xml",
               "DocumentMoniker": "D:\\Unity2018\u9879\u76EE\\MMO\\Src\\Client\\Assets\\References\\protobuf-net.xml",
               "RelativeDocumentMoniker": "Assets\\References\\protobuf-net.xml",

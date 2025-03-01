@@ -21,6 +21,10 @@ public class UIWorldElement : MonoBehaviour
         {
             this.transform.position = owner.position+Vector3.up*height;   //自动跟踪
         }
+        if (Camera.main != null)
+        {
+            this.transform.forward = Camera.main.transform.forward;//头顶元素，跟相机前方一样
+        }
 
 
     }

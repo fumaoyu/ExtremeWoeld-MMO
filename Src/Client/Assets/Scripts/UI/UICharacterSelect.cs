@@ -4,7 +4,8 @@ using UnityEngine.UI;
 using Models;
 using Services;
 using SkillBridge.Message;
-public class UICharacterSelect : MonoBehaviour {
+public class UICharacterSelect : MonoBehaviour
+{
 
     public GameObject panelCreate;
     public GameObject panelSelect;
@@ -67,16 +68,35 @@ public class UICharacterSelect : MonoBehaviour {
                 uiChars.Add(go);
                 go.SetActive(true);
             }
+
+            if (User.Instance.Info.Player.Characters.Count > 0)
+            {
+                OnSelectCharacter(0);
+            }
         }
     }
-
     public void InitCharacterCreate()
     {
         panelCreate.SetActive(true);
         panelSelect.SetActive(false);
         OnSelectClass(1);
     }
-	
+	    public void OnSelectCharacter(int idx)
+    {
+        this.selectCharacterIdx = idx;
+        var cha = User.Instance.Info.Player.Characters[idx];
+        Debug.LogFormat("Select Char:[{0}] {1}  [{2}]", cha.Id, cha.Name, cha.Class);
+       // User.Instance.CurrentCharacter = cha;
+        characterView.CurrectCharacter = ((int)cha.Class -1);
+
+        for (int i = 0; i < User.Instance.Info.Player.Characters.Count; i++)
+        {
+            UICharInfo ci = this.uiChars[i].GetComponent<UICharInfo>();
+            ci.Selected = idx == i;//设置高亮
+            //ci.Selected = idx == i;
+        }
+    }
+
 	// Update is called once per frame
 	void Update () {
 		
@@ -90,67 +110,43 @@ public class UICharacterSelect : MonoBehaviour {
             return;
         }
         UserService.Instance.SendCharacterCreate(this.charName.text, this.charClass);//给服务器发送创建角色协议
-
-
-        //-----------------自己写的
-        //if (string.IsNullOrEmpty(this.charName.text))
-        //{
-        //    MessageBox.Show(":");
-        //    return;
-        //}
-        //UserService.Instance.SendCharacterCreate(this.charName.text, this.charClass);
     }
-
-    public void OnSelectClass(int charClass)
-    {
-        this.charClass = (CharacterClass)charClass;
-
-        characterView.CurrectCharacter = charClass - 1;
-
-        for (int i = 0; i < 3; i++)
+        public void OnSelectClass(int charClass)
         {
-            titles[i].gameObject.SetActive(i == charClass - 1);
-            names[i].text = DataManager.Instance.Characters[i + 1].Name;
+            this.charClass = (CharacterClass)charClass;
+
+            characterView.CurrectCharacter = charClass - 1;
+
+            for (int i = 0; i < 3; i++)
+            {
+                titles[i].gameObject.SetActive(i == charClass - 1);
+                names[i].text = DataManager.Instance.Characters[i + 1].Name;
+            }
+            Debug.LogFormat("当前Class为{0}", charClass);
+            descs.text = DataManager.Instance.Characters[charClass].Description;//读取数据职业名字
+
         }
 
-        descs.text = DataManager.Instance.Characters[charClass].Description;//读取数据职业名字
 
-    }
-
-
-    void OnCharacterCreate(Result result, string message)
-    {
-        if (result == Result.Success)
+        void OnCharacterCreate(Result result, string message)
         {
-            InitCharacterSelect(true);
+            if (result == Result.Success)
+            {
+                InitCharacterSelect(true);
 
+            }
+            else
+                MessageBox.Show(message, "错误", MessageBoxType.Error);
         }
-        else
-            MessageBox.Show(message, "错误", MessageBoxType.Error);
-    }
 
-    public void OnSelectCharacter(int idx)
-    {
-        this.selectCharacterIdx = idx;
-        var cha = User.Instance.Info.Player.Characters[idx];
-        Debug.LogFormat("Select Char:[{0}]{1}[{2}]", cha.Id, cha.Name, cha.Class);
-       // User.Instance.CurrentCharacter = cha;
-        characterView.CurrectCharacter = ((int)cha.Class -1);
-
-        for (int i = 0; i < User.Instance.Info.Player.Characters.Count; i++)
+        public void OnClickPlay()
         {
-            UICharInfo ci = this.uiChars[i].GetComponent<UICharInfo>();
-            ci.Selected = idx == i;//设置高亮
-            //ci.Selected = idx == i;
-        }
-    }
-    public void OnClickPlay()
-    {
-        if (selectCharacterIdx >= 0)
-        {
-            MessageBox.Show("进入游戏", "进入游戏", MessageBoxType.Confirm);
+            if (selectCharacterIdx >= 0)
+            {
+                MessageBox.Show("进入游戏", "进入游戏", MessageBoxType.Confirm);
 
-            UserService.Instance.SendGameEnter(selectCharacterIdx);
-        }
-    }
+                UserService.Instance.SendGameEnter(selectCharacterIdx);
+               // UserService.Instance.SendTestSecond();
+            }
+        } 
 }

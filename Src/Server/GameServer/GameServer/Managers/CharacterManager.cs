@@ -1,11 +1,14 @@
 ﻿using Common;
-using GameServer.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using SkillBridge.Message;
+using GameServer.Entities;
+/// <summary>
+/// 
+/// </summary>
 namespace GameServer.Managers
 {
     /// <summary>
@@ -38,16 +41,30 @@ namespace GameServer.Managers
         {
             Character character = new Character(SkillBridge.Message.CharacterType.Player, cha);
             EntityManager.Instance.AddEntity(cha.MapID, character);
-            character.Info.Id = character.Id;////同步从entity同步给网络，网络同步给entity
+            character.Info.EntityId = character.entityId;////同步从entity同步给网络，网络同步给entity
             this.Characters[character.Id ] = character;
             return character;
         }
+
 
         public void RemoveCharacter(int characterId)
         {
             var cha = this.Characters[characterId];
             EntityManager.Instance.RemoveEntity(cha.Data.MapID,cha);
             this.Characters.Remove(characterId);
+            /*if (this.Characters.ContainsKey(characterId))
+            {
+                var cha = this.Characters[characterId];
+                EntityManager.Instance.RemoveEntity(cha.Data.MapID, cha);
+                
+            }*/
+        }
+
+        public Character GetCharacter(int characterId)
+        {
+            Character character = null;
+            this.Characters.TryGetValue(characterId, out character);
+            return character;
         }
     }
 }

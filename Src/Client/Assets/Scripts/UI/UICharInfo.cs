@@ -10,6 +10,7 @@ public class UICharInfo : MonoBehaviour {
 
     public Text charClass;
     public Text charName;
+    public Text charLevel;
     public Image highlight;
 
     public bool Selected

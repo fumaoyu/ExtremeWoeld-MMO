@@ -41,7 +41,7 @@ class PlayerInputController : MonoBehaviour
 
             cinfo.Id = 1;
             cinfo.Name = "dscsd";
-            cinfo.Tid = 1;
+            cinfo.ConfigId = 1;
             cinfo.Entity = new NEntity();
             cinfo.Entity.Position = new NVector3();
             cinfo.Entity.Direction = new NVector3();

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 
@@ -34,7 +35,7 @@ public class TabButton : MonoBehaviour
     {
         tabImage.overrideSprite = select ? activeImage : normalImage;
     }
-    public void OnClick()
+    void  OnClick()
     {
         this.tabView.SelectTab(this.tabIndex);
         Debug.Log("点击了按钮{0}" );

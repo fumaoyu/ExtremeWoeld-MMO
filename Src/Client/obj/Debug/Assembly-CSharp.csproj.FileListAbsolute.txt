@@ -137,3 +137,4 @@ D:\Unity2018项目\MMO\Src\Client\obj\Debug\Assembly-CSharp.pdb
 D:\Unity2018项目\MMO\Src\Client\Temp\bin\Debug\Common.pdb
 D:\Unity2018项目\MMO\Src\Client\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
 D:\Unity2018项目\MMO\Src\Client\obj\Debug\Assembly-CSharp.csproj.CopyComplete
+D:\Unity2018项目\MMO\Src\Client\obj\Debug\Assembly-CSharp.csproj.AssemblyReference.cache

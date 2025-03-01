@@ -89,6 +89,7 @@ namespace GameServer.Managers
                 //this.owner
                 Items.Add(itemid,item);//插入内存字典
             }
+            this.owner.StatusManager.AddItemChange(itemid, count, StatusAction.Add);//变化记录到状态管理器
             Log.InfoFormat("[{0}] AddItem[ ID:{1} Count:{2}]", this.owner.Data.ID, item, count);
             //DBService.Instance.Save();
             return true;
@@ -105,6 +106,7 @@ namespace GameServer.Managers
                 item.Remove(count);
                 Log.InfoFormat("[{0} RemoveItem[ {1} :{2}]]", this.owner.Data.ID, item, count);
                 //DBService.Instance.Save();
+                this.owner.StatusManager.AddItemChange(itemid, count, StatusAction.Delete);////
                 return true;
             }
             return false;

@@ -153,6 +153,7 @@
     "18": {
       "ItemID": 1006,
       "Count": 1,
+      "PayType": 1,
       "GoldPrice": 700,
       "DiacondPrice": 18,
       "Status": 1
@@ -160,67 +161,89 @@
     "19": {
       "ItemID": 1007,
       "Count": 1,
+      "PayType": 2,
       "GoldPrice": 800,
+      "DiacondPrice": 20,
       "Status": 1
     },
     "20": {
       "ItemID": 2003,
       "Count": 1,
+      "PayType": 2,
       "GoldPrice": 400,
+      "DiacondPrice": 24,
       "Status": 1
     },
     "21": {
       "ItemID": 2004,
       "Count": 1,
+      "PayType": 1,
       "GoldPrice": 500,
+      "DiacondPrice": 25,
       "Status": 1
     },
     "22": {
       "ItemID": 2005,
       "Count": 1,
+      "PayType": 0,
       "GoldPrice": 600,
+      "DiacondPrice": 26,
       "Status": 1
     },
     "23": {
       "ItemID": 2006,
       "Count": 1,
+      "PayType": 0,
       "GoldPrice": 700,
+      "DiacondPrice": 27,
       "Status": 1
     },
     "24": {
       "ItemID": 2007,
       "Count": 1,
+      "PayType": 2,
       "GoldPrice": 800,
+      "DiacondPrice": 27,
       "Status": 1
     },
     "25": {
       "ItemID": 3003,
       "Count": 1,
+      "PayType": 1,
       "GoldPrice": 400,
+      "DiacondPrice": 30,
       "Status": 1
     },
     "26": {
       "ItemID": 3004,
       "Count": 1,
+      "PayType": 2,
       "GoldPrice": 500,
+      "DiacondPrice": 30,
       "Status": 1
     },
     "27": {
       "ItemID": 3005,
       "Count": 1,
+      "PayType": 1,
       "GoldPrice": 600,
+      "DiacondPrice": 34,
       "Status": 1
     },
     "28": {
       "ItemID": 3006,
       "Count": 1,
+      "PayType": 1,
       "GoldPrice": 700,
+      "DiacondPrice": 36,
       "Status": 1
     },
     "29": {
       "ItemID": 3007,
       "Count": 1,
+      "PayType": 0,
       "GoldPrice": 800,
+      "DiacondPrice": 38,
       "Status": 1
     }
   },

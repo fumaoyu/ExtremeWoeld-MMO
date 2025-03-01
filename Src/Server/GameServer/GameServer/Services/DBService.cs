@@ -28,7 +28,7 @@ namespace GameServer.Services
         float time = 0;
         private object _lock = new object();
         private Timer _timer;
-        public void Save()
+        public void Save(bool async=false)
         {
             //DateTime time1 = DateTime.Now.AddSeconds(-5);
 
@@ -41,7 +41,11 @@ namespace GameServer.Services
             //{
 
             //}
-            entities.SaveChangesAsync();//异步保存db数据
+            if (async)
+                entities.SaveChangesAsync();//异步保存db数据
+            else
+                entities.SaveChanges();
+
         }
     }
 }

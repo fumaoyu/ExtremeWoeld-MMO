@@ -19,11 +19,6 @@ public class UIRegister : MonoBehaviour {
         UserService.Instance.OnRegister = OnRegister;
     }
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
-
     public void OnClickRegister()
     {
         if (string.IsNullOrEmpty(this.username.text))
@@ -55,8 +50,8 @@ public class UIRegister : MonoBehaviour {
     {
         if (result == Result.Success)
         {
-            //登录成功，进入角色选择
-            MessageBox.Show("注册成功,请登录", "提示", MessageBoxType.Information).OnYes = this.CloseRegister;
+            MessageBox.Show("注册成功");
+           
         }
         else
             MessageBox.Show(message, "错误", MessageBoxType.Error);

@@ -1,5 +1,6 @@
 ﻿using Common.Data;
 using Models;
+using Services;
 using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
@@ -27,7 +28,57 @@ namespace Managers
                 Debug.LogFormat("ItemManager:Init[{0}]", item);
 
             }
+            StatusService.Instance.RegisterStatusNofity(StatusType.Item, OnItemNotify);
         }
+
+        /// <summary>
+        /// 訂閲了消息，
+        /// </summary>+
+        /// <param name="status"></param>
+        /// <returns></returns>
+        private bool OnItemNotify(NStatus status)
+        {
+            if (status.Action == StatusAction.Add)
+            {
+                this.AddItem(status.Id, status.Value);
+            }
+            if (status.Action == StatusAction.Delete)
+            {
+                this.RemoveItem(status.Id, status.Value);
+            }
+            return true;
+        }
+
+        private void AddItem(int id, int count)
+        {
+            Item item = null;
+            if (Items.TryGetValue(id, out item))
+            {
+                item.Count += count;
+            }
+            else
+            {
+                item = new Item(id, count);
+                Items.Add(id, item);
+            }
+            BagManager.Instance.AddItem(id, count);//道具更新了背包里面信息也要更新
+        }
+        private void RemoveItem(int id, int count)
+        {
+           if (!this.Items.ContainsKey(id))
+            {
+                return;
+            }
+           Item  item=this.Items[id];//
+            if (item.Count < count)
+            {
+                return;
+            }
+            item.Count -= count;
+            BagManager.Instance.RemoveItem(id, count);
+        }
+
+  
 
         public ItemDefine GetItem(int itemid)
         {

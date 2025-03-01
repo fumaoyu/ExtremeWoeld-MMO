@@ -23,6 +23,7 @@
     "Target3ID": 0,
     "Target3Num": 0,
     "RewardGold": 300,
+    "RewardDiamond": 20,
     "RewardExp": 2000,
     "RewardItem1": 3,
     "RewardItem1Count": 5
@@ -32,7 +33,7 @@
     "Name": "拜访奥德利奇",
     "LimitLevel": 1,
     "LimitClass": 0,
-    "PreQuest": 1001,
+    "PreQuest": 0,
     "Type": "MAIN",
     "AcceptNPC": 3,
     "SubmitNPC": 4,
@@ -51,6 +52,7 @@
     "Target3ID": 0,
     "Target3Num": 0,
     "RewardGold": 500,
+    "RewardDiamond": 50,
     "RewardExp": 2000,
     "RewardItem1": 4,
     "RewardItem1Count": 10
@@ -79,6 +81,7 @@
     "Target3ID": 0,
     "Target3Num": 0,
     "RewardGold": 700,
+    "RewardDiamond": 70,
     "RewardExp": 2000
   },
   "1004": {
@@ -105,6 +108,7 @@
     "Target3ID": 0,
     "Target3Num": 0,
     "RewardGold": 900,
+    "RewardDiamond": 90,
     "RewardExp": 2000
   },
   "2001": {
@@ -132,6 +136,7 @@
     "Target3ID": 0,
     "Target3Num": 0,
     "RewardGold": 1000,
+    "RewardDiamond": 100,
     "RewardExp": 3000
   },
   "2002": {
@@ -159,6 +164,7 @@
     "Target3ID": 0,
     "Target3Num": 0,
     "RewardGold": 1000,
+    "RewardDiamond": 100,
     "RewardExp": 5000
   },
   "2003": {
@@ -186,6 +192,7 @@
     "Target3ID": 0,
     "Target3Num": 0,
     "RewardGold": 2000,
+    "RewardDiamond": 190,
     "RewardExp": 10000,
     "RewardItem1": 1011,
     "RewardItem1Count": 1,
@@ -217,6 +224,7 @@
     "Target3ID": 5,
     "Target3Num": 5,
     "RewardGold": 10000,
+    "RewardDiamond": 500,
     "RewardExp": 50000,
     "RewardItem1": 1013,
     "RewardItem1Count": 1
@@ -246,6 +254,7 @@
     "Target3ID": 10,
     "Target3Num": 10,
     "RewardGold": 18000,
+    "RewardDiamond": 600,
     "RewardExp": 90000,
     "RewardItem1": 2011,
     "RewardItem1Count": 1,
@@ -277,6 +286,7 @@
     "Target3ID": 15,
     "Target3Num": 15,
     "RewardGold": 26000,
+    "RewardDiamond": 700,
     "RewardExp": 130000,
     "RewardItem1": 2013,
     "RewardItem1Count": 1
@@ -306,6 +316,7 @@
     "Target3ID": 20,
     "Target3Num": 20,
     "RewardGold": 34000,
+    "RewardDiamond": 999,
     "RewardExp": 170000,
     "RewardItem1": 3011,
     "RewardItem1Count": 1,
@@ -337,6 +348,7 @@
     "Target3ID": 25,
     "Target3Num": 25,
     "RewardGold": 42000,
+    "RewardDiamond": 1314,
     "RewardExp": 210000,
     "RewardItem1": 3013,
     "RewardItem1Count": 1
@@ -365,6 +377,7 @@
     "Target3ID": 0,
     "Target3Num": 0,
     "RewardGold": 1000,
+    "RewardDiamond": 99,
     "RewardExp": 3000,
     "RewardItem1": 9,
     "RewardItem1Count": 1

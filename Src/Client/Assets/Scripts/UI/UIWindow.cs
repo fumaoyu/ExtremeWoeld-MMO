@@ -28,7 +28,7 @@ public class UIWindow : MonoBehaviour
     {
         None=0,
         Yes,
-        Np,
+        No,
     }
 
 
@@ -49,8 +49,12 @@ public class UIWindow : MonoBehaviour
     {
         this.Close(WindowResult.Yes);
     }
+    public virtual void OnNoClick()
+    {
+        this.Close(WindowResult.No);
+    }
 
-    public void OnMouseDown()
+     public  void OnMouseDown()
     {
         Debug.LogFormat(this.name + "Clicked");
     }

@@ -35,11 +35,11 @@ namespace Services
             MessageDistributer.Instance.Subscribe<UserCreateCharacterResponse>(this.OnUserCreateCharacter);
             MessageDistributer.Instance.Subscribe<UserGameEnterResponse>(this.OnGameEnter);
             MessageDistributer.Instance.Subscribe<UserGameLeaveResponse>(this.OnGameLeave);
-            MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
-
+            //MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
+            MessageDistributer.Instance.Subscribe<SenondTestRespose>(this.OnSecondTest);
         }
 
-    
+        
 
         public void Dispose()//一般成对出现订阅和取消订阅
         {
@@ -48,7 +48,7 @@ namespace Services
             MessageDistributer.Instance.Unsubscribe<UserCreateCharacterResponse>(this.OnUserCreateCharacter);
             MessageDistributer.Instance.Unsubscribe<UserGameEnterResponse>(this.OnGameEnter);
              MessageDistributer.Instance.Unsubscribe<UserGameLeaveResponse>(this.OnGameLeave);
-            MessageDistributer.Instance.Unsubscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
+          //  MessageDistributer.Instance.Unsubscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
 
 
 
@@ -58,7 +58,11 @@ namespace Services
 
         public void Init()
         {
-
+            //NetMessage msg = new NetMessage();
+            //msg.Request = new NetMessageRequest();
+            //msg.Request.secodnTestRequest = new SenondTestRequest();
+            //msg.Request.secodnTestRequest.Id = 1;
+            //NetClient.Instance.SendMessage(msg);
         }
 
         /// <summary>
@@ -149,6 +153,8 @@ namespace Services
                 this.pendingMessage = message;
                 this.ConnectToServer();
             }
+
+        
         }
 
         void OnUserLogin(object sender, UserLoginResponse response)
@@ -206,7 +212,7 @@ namespace Services
         /// <param name="cls">职业</param>
         public void SendCharacterCreate(string name, CharacterClass cls)
         {
-            Debug.LogFormat("UserCreateCharacterRequest::name :{0} class:{1}", name, cls);
+            Debug.LogFormat("SenderCharacterCreate:{0} {1}",name,cls);
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
             message.Request.createChar = new UserCreateCharacterRequest();
@@ -278,10 +284,15 @@ namespace Services
         }
         public void SendGameEnter(int characterId)
         {
-            Debug.LogFormat("UserGameEnterRequest::characterID: {0}", characterId);
+            Debug.LogFormat("SendGameEnter:{0}", characterId);
             NetMessage netMessage = new NetMessage();
             netMessage.Request = new NetMessageRequest();
             netMessage.Request.gameEnter = new UserGameEnterRequest();
+
+
+          
+
+
             netMessage.Request.gameEnter.characterIdx = characterId;
             if (this.connected && NetClient.Instance.Connected)
             { 
@@ -293,18 +304,29 @@ namespace Services
                 this.pendingMessage = netMessage;
                 this.ConnectToServer();
             }
+            //NetMessage msg = new NetMessage();
+            //msg.Request = new NetMessageRequest();
+           
+            //NetClient.Instance.SendMessage(netMessage);
         }
 
         private void OnGameEnter(object sender, UserGameEnterResponse message)
         {
-            Debug.LogFormat("OnEnterGame:id  {0} ", message.Result);
-
+            Debug.LogFormat("收到进入游戏：{0}  玩家Id{1}  名字：{2}", message.Result,message.Character.Id,message.Character.Name);
             if (message.Result == Result.Success)
             {
                 if (message.Character != null)
                 {
+                    User.Instance.CurrentCharacter = message.Character;
+
                     ItemManager.Instance.Init(message.Character.Items);//初始化道具
                     BagManager.Instance.Init(message.Character.Bag);//初始化背包
+                    EquipManager.Instance.Init(message.Character.Equips);
+                    QuestManager.Instance.Init(message.Character.Quests);
+
+                    FriendManager.Instance.Init(message.Character.Friends);
+
+                    GuildManager.Instance.Init(message.Character.Guild);
                 }
             }
         }
@@ -312,20 +334,48 @@ namespace Services
         private void OnCharacterEnter(object sender, MapCharacterEnterResponse message)
         {
             //throw new NotImplementedException();
-            Debug.LogFormat("OnCharacterEnter :{0}", message.mapId);
+            Debug.LogFormat("MapCharacterEnter: {0}", message.mapId);
+            Debug.LogFormat("当前玩家信息 名字:{0}  Id:{1}", User.Instance.CurrentCharacter.Name, User.Instance.CurrentCharacter.Id);
             NCharacterInfo info = message.Characters[0];//因为返回的就是当前一个角色
-            User.Instance.CurrentCharacter = info; ;
+
+            Debug.LogFormat("当前玩家信息 名字:{0}  Id:{1}", info.Name, info.Id);
+
+            User.Instance.CurrentCharacter = info; 
             SceneManager.Instance.LoadScene(DataManager.Instance.Maps[message.mapId].Resource);
         }
-
+        void OnSecondTest(object sender, SenondTestRespose message)
+        {
+            Debug.LogFormat("OnSecondTestResponse {0}|| 结果  {1}" , message.sName, message.Result);
+        }
         public void SendGameLeave()
         {
             Debug.LogFormat("UserGameLeaveRequest");
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
             message.Request.gameLeave = new UserGameLeaveRequest();
+
+          
             NetClient.Instance.SendMessage(message);
 
+            //NetMessage message = new NetMessage();
+            //message.Request = new NetMessageRequest();
+        }
+
+        public void SendTestSecond()
+        {
+            //Debug.LogFormat("SecondTestRequest");
+            //NetMessage message = new NetMessage();
+            //message.Request = new NetMessageRequest();
+            ////message.Request.secodnTestRequest = new SenondTestRequest();
+            ////message.Request.secodnTestRequest.Id = 1;
+
+            ////message.Request.secodnTestRequest = new SenondTestRequest();
+            ////message.Request.secodnTestRequest.Id = 1;
+
+            //NetClient.Instance.SendMessage(message);
+
+            //NetMessage message = new NetMessage();
+            //message.Request = new NetMessageRequest();
         }
 
         private void OnGameLeave(object sender, UserGameLeaveResponse message)

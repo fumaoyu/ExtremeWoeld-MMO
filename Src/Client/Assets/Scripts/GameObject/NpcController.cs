@@ -24,6 +24,9 @@ public class NpcController : MonoBehaviour
     /// 配置表中数据
     /// </summary>
     public NpcDefine npcDefine;
+
+
+    NpcQuestStatus questStatus;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,13 +37,41 @@ public class NpcController : MonoBehaviour
         npcDefine = NpcManager.Instance.GetNpcDefine(NpcId);
 
         this.StartCoroutine(Actions());
+
+        RefreshNpcStatus();//打开初始化
+        QuestManager.Instance.onQuestStatusChanged += OnQuestStatusChanged;//任务改变通知npcs刷新小图标
     }
+
+    void OnQuestStatusChanged(Quest quest)
+    {
+        this.RefreshNpcStatus();
+    }
+
+    /// <summary>
+    /// 刷新npc状态
+    /// </summary>
+    private void RefreshNpcStatus()
+    {
+        questStatus = QuestManager.Instance.GetQuestStatusByNpc(this.NpcId);
+        UIWorldElementManager.Instance.AddNpcQuestStatus(this.transform, questStatus);
+    }
+
+    private void OnDestroy()///npc销毁时
+    {
+        QuestManager.Instance.onQuestStatusChanged -= OnQuestStatusChanged;
+        if (UIWorldElementManager.Instance != null)
+        {
+            UIWorldElementManager.Instance.RemoveNpcQuestStatus(this.transform);
+        }
+    }
+
+
 
     /// <summary>
     /// 这个协成随机更换动作使用的
     /// </summary>
     /// <returns></returns>
-     IEnumerator Actions()
+    IEnumerator Actions()
     {
         while (true)
         {

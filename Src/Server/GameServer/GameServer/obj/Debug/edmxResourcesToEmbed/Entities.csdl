@@ -32,6 +32,27 @@
       <End Role="TCharacter" EntitySet="Characters" />
       <End Role="TCharacterBag" EntitySet="CharacterBags" />
     </AssociationSet>
+    <EntitySet Name="CharacterQuests" EntityType="ExtremeWorldModel.TCharacterQuest" />
+    <AssociationSet Name="TCharacterTCharacterQuest" Association="ExtremeWorldModel.TCharacterTCharacterQuest">
+      <End Role="TCharacter" EntitySet="Characters" />
+      <End Role="TCharacterQuest" EntitySet="CharacterQuests" />
+    </AssociationSet>
+    <EntitySet Name="CharacterFriends" EntityType="ExtremeWorldModel.TCharacterFriend" />
+    <AssociationSet Name="TCharacterTCharacterFriend" Association="ExtremeWorldModel.TCharacterTCharacterFriend">
+      <End Role="TCharacter" EntitySet="Characters" />
+      <End Role="TCharacterFriend" EntitySet="CharacterFriends" />
+    </AssociationSet>
+    <EntitySet Name="Guild" EntityType="ExtremeWorldModel.TGuild" />
+    <EntitySet Name="GuildMember" EntityType="ExtremeWorldModel.TGuildMember" />
+    <EntitySet Name="GuildApply" EntityType="ExtremeWorldModel.TGuildApply" />
+    <AssociationSet Name="Member" Association="ExtremeWorldModel.Member">
+      <End Role="TGuild" EntitySet="Guild" />
+      <End Role="TGuildMember" EntitySet="GuildMember" />
+    </AssociationSet>
+    <AssociationSet Name="Apply" Association="ExtremeWorldModel.Apply">
+      <End Role="TGuild" EntitySet="Guild" />
+      <End Role="TGuildApply" EntitySet="GuildApply" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="TPlayer">
     <Key>
@@ -61,6 +82,12 @@
     <NavigationProperty Name="CharacterBag" Relationship="ExtremeWorldModel.CharacterBag" FromRole="TCharacter" ToRole="TCharacterBag" />
     <Property Name="Gold" Type="Int64" Nullable="false" />
     <Property Name="Diamond" Type="Int32" Nullable="false" />
+    <Property Name="Equips" Type="Binary" Nullable="false" FixedLength="true" MaxLength="28" />
+    <NavigationProperty Name="Quests" Relationship="ExtremeWorldModel.TCharacterTCharacterQuest" FromRole="TCharacter" ToRole="TCharacterQuest" />
+    <Property Name="Level" Type="Int32" Nullable="false" />
+    <Property Name="Exp" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="CharacterFriends" Relationship="ExtremeWorldModel.TCharacterTCharacterFriend" FromRole="TCharacter" ToRole="TCharacterFriend" />
+    <Property Name="GuildID" Type="Int32" Nullable="false" />
   </EntityType>
   <Association Name="PlayerCharacter">
     <End Type="ExtremeWorldModel.TPlayer" Role="Player" Multiplicity="1" />
@@ -100,5 +127,106 @@
   <Association Name="CharacterBag">
     <End Type="ExtremeWorldModel.TCharacter" Role="TCharacter" Multiplicity="1" />
     <End Type="ExtremeWorldModel.TCharacterBag" Role="TCharacterBag" Multiplicity="1" />
+  </Association>
+  <EntityType Name="TCharacterQuest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Owner" Relationship="ExtremeWorldModel.TCharacterTCharacterQuest" FromRole="TCharacterQuest" ToRole="TCharacter" />
+    <Property Name="TCharacterID" Type="Int32" Nullable="false" />
+    <Property Name="QuestID" Type="Int32" Nullable="false" />
+    <Property Name="Target1" Type="Int32" Nullable="false" />
+    <Property Name="Target2" Type="Int32" Nullable="false" />
+    <Property Name="Target3" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="TCharacterTCharacterQuest">
+    <End Type="ExtremeWorldModel.TCharacter" Role="TCharacter" Multiplicity="1" />
+    <End Type="ExtremeWorldModel.TCharacterQuest" Role="TCharacterQuest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TCharacter">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TCharacterQuest">
+        <PropertyRef Name="TCharacterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TCharacterFriend">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Owner" Relationship="ExtremeWorldModel.TCharacterTCharacterFriend" FromRole="TCharacterFriend" ToRole="TCharacter" />
+    <Property Name="CharacterID" Type="Int32" Nullable="false" />
+    <Property Name="FriendID" Type="Int32" Nullable="false" />
+    <Property Name="FriendName" Type="String" Nullable="false" />
+    <Property Name="Class" Type="Int32" Nullable="false" />
+    <Property Name="Level" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="TCharacterTCharacterFriend">
+    <End Type="ExtremeWorldModel.TCharacter" Role="TCharacter" Multiplicity="1" />
+    <End Type="ExtremeWorldModel.TCharacterFriend" Role="TCharacterFriend" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TCharacter">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TCharacterFriend">
+        <PropertyRef Name="CharacterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TGuild">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="LeaderID" Type="Int32" Nullable="false" />
+    <Property Name="LeaderName" Type="String" Nullable="false" />
+    <Property Name="LeaderClass" Type="Int32" Nullable="false" />
+    <Property Name="LeaderLeval" Type="Int32" Nullable="false" />
+    <Property Name="Notice" Type="String" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="Members" Relationship="ExtremeWorldModel.Member" FromRole="TGuild" ToRole="TGuildMember" />
+    <NavigationProperty Name="Apply" Relationship="ExtremeWorldModel.Apply" FromRole="TGuild" ToRole="TGuildApply" />
+  </EntityType>
+  <EntityType Name="TGuildMember">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CharacterId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Class" Type="Int32" Nullable="false" />
+    <Property Name="Level" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="Int32" Nullable="false" />
+    <Property Name="JoinTime" Type="DateTime" Nullable="false" />
+    <Property Name="LastTime" Type="DateTime" Nullable="false" />
+    <Property Name="GuildID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Guild" Relationship="ExtremeWorldModel.Member" FromRole="TGuildMember" ToRole="TGuild" />
+  </EntityType>
+  <EntityType Name="TGuildApply">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CharacterId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Class" Type="Int32" Nullable="false" />
+    <Property Name="Level" Type="Int32" Nullable="false" />
+    <Property Name="Result" Type="Int32" Nullable="false" />
+    <Property Name="ApplyTime" Type="DateTime" Nullable="false" />
+    <Property Name="GuildID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Guild" Relationship="ExtremeWorldModel.Apply" FromRole="TGuildApply" ToRole="TGuild" />
+  </EntityType>
+  <Association Name="Member">
+    <End Type="ExtremeWorldModel.TGuild" Role="TGuild" Multiplicity="1" />
+    <End Type="ExtremeWorldModel.TGuildMember" Role="TGuildMember" Multiplicity="*" />
+  </Association>
+  <Association Name="Apply">
+    <End Type="ExtremeWorldModel.TGuild" Role="TGuild" Multiplicity="1" />
+    <End Type="ExtremeWorldModel.TGuildApply" Role="TGuildApply" Multiplicity="*" />
   </Association>
 </Schema>

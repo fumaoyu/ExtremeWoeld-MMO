@@ -1,4 +1,5 @@
 ﻿using Common.Data;
+using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,19 @@ namespace Models
             this.userInfo = info;
         }
 
+        internal void AddDiamond(int v)
+        {
+            CurrentCharacter.Diamond += v;
+        }
+
+        internal void AddGold(int v)
+        {
+            CurrentCharacter.Gold += v;
+        }
+
         public SkillBridge.Message.NCharacterInfo CurrentCharacter { get; set; }
+
+        public NTeamInfo TeamInfo { get; set; }//队伍信息这样添加数据用着方便
 
         public MapDefine CurrentMapDate { get; set; }
 

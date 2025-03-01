@@ -25,6 +25,13 @@ public class DataManager : Singleton<DataManager>
     public Dictionary<int,ItemDefine> Items = null;
     public Dictionary<int, ShopDefine> Shops = null;
     public Dictionary<int, Dictionary<int, ShopItemDefine>> ShopItems = null;
+    public Dictionary<int, EquipDefine> Equips = null;
+    public Dictionary<int, QuestDefine> Quests = null;
+   // public Dictionary<int, Dictionary<int, SpawnPointDefine>> SpawnPoints = null;
+    public Dictionary<int, Dictionary<int, SpawnRuleDefine>> SpawnRules = null;
+
+   // public Dictionary<int, CharacterNameDefine> CharacterNames= null;
+
     public DataManager()
     {
         this.DataPath = "Data/";
@@ -59,11 +66,22 @@ public class DataManager : Singleton<DataManager>
         json = File.ReadAllText(this.DataPath + "ShopItemDefine.txt");
         this.ShopItems = JsonConvert.DeserializeObject<Dictionary<int,Dictionary<int, ShopItemDefine>>>(json);
 
-        // Debug.Log(json);
-        //json = File.ReadAllText(this.DataPath + "SpawnPointDefine.txt");
-        //this.SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>>(json);
+        json = File.ReadAllText(this.DataPath + "EquipDefine.txt");
+        this.Equips = JsonConvert.DeserializeObject<Dictionary<int, EquipDefine>>(json);
 
-        Debug.Log("5");
+        json = File.ReadAllText(this.DataPath + "QuestDefine.txt");
+        this.Quests = JsonConvert.DeserializeObject<Dictionary<int, QuestDefine>>(json);
+
+        json = File.ReadAllText(this.DataPath + "SpawnPointDefine.txt");
+        this.SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>>(json);
+
+        json = File.ReadAllText(this.DataPath + "SpawnRuleDefine.txt");
+        this.SpawnRules = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnRuleDefine>>>(json);
+
+
+        //json = File.ReadAllText(this.DataPath + "CharacterName.txt");
+        //this.CharacterNames = JsonConvert.DeserializeObject<Dictionary<int, CharacterNameDefine>>(json);
+
     }
 
     //øÕªß∂À”√
@@ -87,37 +105,48 @@ public class DataManager : Singleton<DataManager>
         json = File.ReadAllText(this.DataPath + "NpcDefine.txt");
         this.Npcs = JsonConvert.DeserializeObject<Dictionary<int, NpcDefine>>(json);
 
+        yield return null;
+
+        json = File.ReadAllText(this.DataPath + "ItemDefine.txt");
+        this.Items = JsonConvert.DeserializeObject<Dictionary<int, ItemDefine>>(json);
+
+        yield return null;
+
+        json = File.ReadAllText(this.DataPath + "ShopDefine.txt");
+        this.Shops = JsonConvert.DeserializeObject<Dictionary<int, ShopDefine>>(json);
+
+        yield return null;
+
+        json = File.ReadAllText(this.DataPath + "ShopItemDefine.txt");
+        this.ShopItems = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, ShopItemDefine>>>(json);
+
+        yield return null;
+
+        json = File.ReadAllText(this.DataPath + "EquipDefine.txt");
+        this.Equips = JsonConvert.DeserializeObject<Dictionary<int, EquipDefine>>(json);
+
+        yield return null;
+
+        json = File.ReadAllText(this.DataPath + "QuestDefine.txt");
+        this.Quests = JsonConvert.DeserializeObject<Dictionary<int, QuestDefine>>(json);
+
+        yield return null;
+
+        json = File.ReadAllText(this.DataPath + "SpawnPointDefine.txt");
+        this.SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>>(json);
+
+        yield return null;
+
+        json = File.ReadAllText(this.DataPath + "SpawnRuleDefine.txt");
+        this.SpawnRules = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnRuleDefine>>>(json);
+        yield return null;
+
+
+
+        //json = File.ReadAllText(this.DataPath + "CharacterName.txt");
+        //this.CharacterNames = JsonConvert.DeserializeObject<Dictionary<int, CharacterNameDefine>>(json);
         //yield return null;
 
-        //json = File.ReadAllText(this.DataPath + "ItemDefine.txt");
-        //this.Items = JsonConvert.DeserializeObject<Dictionary<int, ItemDefine>>(json);
-
-        //yield return null;
-
-        //json = File.ReadAllText(this.DataPath + "ShopDefine.txt");
-        //this.Shops = JsonConvert.DeserializeObject<Dictionary<int, ShopDefine>>(json);
-
-        //yield return null;
-
-        //json = File.ReadAllText(this.DataPath + "ShopItemDefine.txt");
-        //this.ShopItems = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, ShopItemDefine>>>(json);
-
-        //yield return null;
-
-        //json = File.ReadAllText(this.DataPath + "EquipDefine.txt");
-        //this.Equips = JsonConvert.DeserializeObject<Dictionary<int, EquipDefine>>(json);
-
-        //yield return null;
-
-        //json = File.ReadAllText(this.DataPath + "QuestDefine.txt");
-        //this.Quests = JsonConvert.DeserializeObject<Dictionary<int, QuestDefine>>(json);
-
-        //yield return null;
-
-        //json = File.ReadAllText(this.DataPath + "SpawnPointDefine.txt");
-        //this.SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>>(json);
-
-        //yield return null;
     }
 
 #if UNITY_EDITOR

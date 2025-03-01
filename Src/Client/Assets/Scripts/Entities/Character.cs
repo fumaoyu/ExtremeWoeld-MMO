@@ -29,17 +29,20 @@ namespace Entities
             }
         }
         /// <summary>
-        /// 是不是当前角色玩家
+        /// 是不是角色玩家
         /// </summary>
         public bool IsPlayer
         {
             get
             {
-                //return this.Info.Type == CharacterType.Player;
-                return this.Info.Id == Models.User.Instance.CurrentCharacter.Id;
+                return this.Info.Type == CharacterType.Player;
+                //return this.Info.Id == Models.User.Instance.CurrentCharacter.Id;
             }
         }
 
+        /// <summary>
+        /// 当前玩家
+        /// </summary>
         public bool IsCurrentPlayer
         {
             get
@@ -53,7 +56,11 @@ namespace Entities
         {
             this.Info = info;
             //this.Define = DataManager.Instance.Characters[info.ConfigId];
-            this.Define = DataManager.Instance.Characters[info.Tid];
+            if (DataManager.Instance.Characters.ContainsKey(info.ConfigId))
+            {
+                this.Define = DataManager.Instance.Characters[info.ConfigId];
+            }
+           
         }
 
         public void MoveForward()

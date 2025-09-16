@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using Models;
 using Services;
 using SkillBridge.Message;
+using Managers;
 public class UICharacterSelect : MonoBehaviour
 {
 
@@ -35,9 +36,15 @@ public class UICharacterSelect : MonoBehaviour
     void Start()
     {
         InitCharacterSelect(true);
-        UserService.Instance.OnCharacterCreate = OnCharacterCreate;
+        UserService.Instance.OnCharacterCreate += OnCharacterCreate;
+       // Resources.UnloadAsset(characterView.gameObject);
+        Resources.UnloadUnusedAssets();
     }
 
+    void  OnCollisionEnter()
+    {
+
+    }
 
     public void InitCharacterSelect(bool init)
     {
@@ -146,7 +153,8 @@ public class UICharacterSelect : MonoBehaviour
                 MessageBox.Show("进入游戏", "进入游戏", MessageBoxType.Confirm);
 
                 UserService.Instance.SendGameEnter(selectCharacterIdx);
-               // UserService.Instance.SendTestSecond();
-            }
+            //AudioManager.Instance.PlayMusic(SoundDefine.Music_Select);
+            // UserService.Instance.SendTestSecond();
+        }
         } 
 }

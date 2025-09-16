@@ -25,6 +25,10 @@ namespace GameServer.Managers
         public Dictionary<int, QuestDefine> Quests = null;
         public Dictionary<int, Dictionary<int, SpawnPointDefine>> SpawnPoints = null;
         public Dictionary<int, Dictionary<int, SpawnRuleDefine>> SpawnRules = null;
+        public Dictionary<int, RideDefine> Rides = null;
+
+        public Dictionary<int, Dictionary<int,SkillDefine>>     Skills = null;
+        public Dictionary<int, BuffDefine> Buffs = null;
         public DataManager()
         {
             this.DataPath = "Data/";
@@ -64,11 +68,22 @@ namespace GameServer.Managers
             this.Quests = JsonConvert.DeserializeObject<Dictionary<int, QuestDefine>>(json);
 
 
+
+            json = File.ReadAllText(this.DataPath + "RideDefine.txt");
+            this.Rides = JsonConvert.DeserializeObject<Dictionary<int, RideDefine>>(json);
+
             json = File.ReadAllText(this.DataPath + "SpawnPointDefine.txt");
             this.SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>>(json);
 
             json = File.ReadAllText(this.DataPath + "SpawnRuleDefine.txt");
             this.SpawnRules = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnRuleDefine>>>(json);
+
+            json = File.ReadAllText(this.DataPath + "SKillDefine.txt");
+            this.Skills = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SkillDefine>>>(json);
+
+
+            json = File.ReadAllText(this.DataPath + "BuffDefine.txt");
+            this.Buffs = JsonConvert.DeserializeObject<Dictionary<int,  BuffDefine>>(json);
         }
     }
 }

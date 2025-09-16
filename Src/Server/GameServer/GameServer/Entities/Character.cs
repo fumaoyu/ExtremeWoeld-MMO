@@ -15,9 +15,9 @@ using System.Threading.Tasks;
 
 namespace GameServer.Entities
 {
-    class Character : CharacterBase,IPostResponser
+    class Character : Creature, IPostResponser
     {
-       
+
         public TCharacter Data;//数据库数据
         //每个角色数据不一样。要加角色身上，manager
         public ItemManager ItemManager;//每个角色不一样，就需要一个manager,像地图manager,为所有玩家共有的，角色身上就不需要带
@@ -33,24 +33,34 @@ namespace GameServer.Entities
         public Guild Guild;//公会
         public double GuildUpdateTs;//公会更新时间戳
 
-        public Character(CharacterType type,TCharacter cha)://从db数据赋值到网络
-            base(new Core.Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ),new Core.Vector3Int(100,0,0))
+
+        /// <summary>
+        /// 聊天记录
+        /// </summary>
+        public Chat Chat;
+
+        public Character(CharacterType type, TCharacter cha) ://从db数据赋值到网络
+            base(type,cha.TID,cha.Level,new Core.Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ), new Core.Vector3Int(100, 0, 0))
         {
             this.Data = cha;
             this.Id = cha.ID;
-            this.Info = new NCharacterInfo();//db数据赋值给网络
-            this.Info.Type = type;
+            //this.Info = new NCharacterInfo();//db数据赋值给网络
+           // this.Info.Type = type;
             this.Info.Id = cha.ID;
-            this.Info.EntityId = this.entityId;
-            this.Info.Name = cha.Name;
-            this.Info.Level = 15;//cha.Level;
-            this.Info.ConfigId = cha.TID;
+            //this.Info.EntityId = this.entityId;
+           
+            //this.Info.Level = 15;//cha.Level;
+            this.Info.Exp = (int)cha.Exp;
+            //this.Info.ConfigId = cha.TID;
             this.Info.Class = (CharacterClass)cha.Class;
             this.Info.mapId = cha.MapID;
             this.Info.Gold = cha.Gold;
+            this.Info.Ride = 0;
             this.Info.Diamond = cha.Diamond;
-            this.Info.Entity = this.EntityData;
-            this.Define = DataManager.Instance.Characters[this.Info.ConfigId];
+            //this.Info.Entity = this.EntityData;
+
+            this.Info.Name = cha.Name;
+            //this.Define = DataManager.Instance.Characters[this.Info.ConfigId];
 
             this.ItemManager = new ItemManager(this);
             this.ItemManager.GetItemInfos(this.Info.Items);
@@ -65,7 +75,57 @@ namespace GameServer.Entities
             this.FriendManager = new FriendManager(this);
             this.FriendManager.GetFriendInfos(this.Info.Friends);
             this.Guild = GuildManager.Instance.GetGuild(this.Data.GuildID);
+
+            this.Chat = new Chat(this);
+
+
+            this.Info.attributeDynamic = new NAttributeDynamic();
+            this.Info.attributeDynamic.Hp = cha.HP;
+            this.Info.attributeDynamic.Mp = cha.MP;
         }
+
+        public long Exp
+        {
+            get { return this.Data.Exp; }
+            private set {
+                if (this.Data.Exp == value) return;
+                this.StatusManager.AddExpChange((int)(value - this.Data.Exp));
+                this.Data.Exp = value;
+                this.Info.Exp = (int)value;
+            }
+        }
+        public int Level
+        {
+            get { return this.Data.Level; }
+            private set
+            {
+                if (this.Data.Level == value) return;
+                this.StatusManager.AddLevelUp((int)(value - this.Data.Level));
+                this.Data.Level = value;
+                this.Info.Level = value;
+            }
+        }
+        internal void AddExp(int exp)
+        {
+            this.Exp += exp;
+            this.CheckLevelUp();
+        }
+
+        private void CheckLevelUp()  
+        {
+            ///经验公式exp=power(lv,3)*10+lv*40+50
+            long needExp = (long)Math.Pow(this.Level, 3) * 10 + this.Level * 40 + 50;
+            if (this.Exp > needExp)
+                this.LevelUp();
+        }
+
+        void LevelUp()
+        {
+            this.Level += 1;
+            Log.InfoFormat("Character[{0}:{1}}] LevelUP:{2}", this.Id, this.Info.Name, this.Level);
+            CheckLevelUp();///检查经验是否还能再升级
+        }
+
 
         public NCharacterInfo GetBasicInfo(NCharacterInfo info)
         {
@@ -87,9 +147,21 @@ namespace GameServer.Entities
                     return;
                 this.StatusManager.AddGoldChange((int)(value - this.Data.Gold));
                 this.Data.Gold = value;
+                this.Info.Gold = value;
             }
         }
-        public int  Diamond
+
+        public int Ride
+        {
+            get { return this.Info.Ride; }
+            set
+            {
+                if (this.Info.Ride == value)
+                    return;
+                this.Info.Ride = value;
+            }
+        }
+        public int Diamond
         {
             get { return this.Data.Diamond; }
             set
@@ -98,6 +170,7 @@ namespace GameServer.Entities
                     return;
                 this.StatusManager.AddDiamondChange(value - this.Data.Diamond);//金币的变化，增加不关心
                 this.Data.Diamond = value;
+                this.Info.Diamond = value;
             }
         }
 
@@ -105,7 +178,7 @@ namespace GameServer.Entities
         /// 后处理
         /// </summary>
         /// <param name="message"></param>
-       public void PostProcess(NetMessageResponse message)
+        public void PostProcess(NetMessageResponse message)
         {
             Log.InfoFormat("PostProcess-> CharacteID:{0} Name:{1}", this.Id, this.Info.Name);
 
@@ -114,7 +187,7 @@ namespace GameServer.Entities
             if (this.Team != null)/////组队信息
             {
                 Log.InfoFormat("PostProcess->Team：CharacterID:{0} Name:{1}", this.Id, this.Info.Name);
-                
+
                 if (TeamUpdateTS < this.Team.timestamp)///时间戳，TeamUpdateTS每个人身上的队伍信息变更时间，timestamp，队伍信息变更时间
                 {
                     Log.InfoFormat("TeamUpdateTS:{0} timestamp当前更新时间：{1} ", TeamUpdateTS, this.Team.timestamp);
@@ -125,13 +198,13 @@ namespace GameServer.Entities
 
             if (this.Guild != null)
             {
-                Log.InfoFormat("PostProcess->Guild：CharacterID:{0} Name:{1}   {2}<{3}", this.Id, this.Info.Name,GuildUpdateTs,this.Guild.timeStamp);
+                Log.InfoFormat("PostProcess->Guild：CharacterID:{0} Name:{1}   {2}<{3}", this.Id, this.Info.Name, GuildUpdateTs, this.Guild.timeStamp);
                 if (this.Info.Guild == null)
-                    {
+                {
                     this.Info.Guild = this.Guild.GuildInfo(this);
                     if (message.mapCharacterEnter != null)///不是第一次登录设置一下
                         GuildUpdateTs = Guild.timeStamp;
-                    }
+                }
                 if (GuildUpdateTs < this.Guild.timeStamp && message.mapCharacterEnter == null)
                 {
                     GuildUpdateTs = Guild.timeStamp;
@@ -144,6 +217,8 @@ namespace GameServer.Entities
             {
                 this.StatusManager.PostProcess(message);///状态管理器后处理
             }
+
+            this.Chat.PostProcess(message);
         }
 
         /// <summary>

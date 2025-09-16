@@ -30,8 +30,10 @@ public class DataManager : Singleton<DataManager>
    // public Dictionary<int, Dictionary<int, SpawnPointDefine>> SpawnPoints = null;
     public Dictionary<int, Dictionary<int, SpawnRuleDefine>> SpawnRules = null;
 
-   // public Dictionary<int, CharacterNameDefine> CharacterNames= null;
-
+    public Dictionary<int, RideDefine> Rides = null;
+    // public Dictionary<int, CharacterNameDefine> CharacterNames= null;
+    public Dictionary<int, Dictionary<int, SkillDefine>> Skills = null;
+    public Dictionary<int, BuffDefine> Buffs = null;
     public DataManager()
     {
         this.DataPath = "Data/";
@@ -78,9 +80,18 @@ public class DataManager : Singleton<DataManager>
         json = File.ReadAllText(this.DataPath + "SpawnRuleDefine.txt");
         this.SpawnRules = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnRuleDefine>>>(json);
 
-
+        json = File.ReadAllText(this.DataPath + "RideDefine.txt");
+        this.Rides = JsonConvert.DeserializeObject<Dictionary<int, RideDefine>>(json);
         //json = File.ReadAllText(this.DataPath + "CharacterName.txt");
         //this.CharacterNames = JsonConvert.DeserializeObject<Dictionary<int, CharacterNameDefine>>(json);
+        json = File.ReadAllText(this.DataPath + "SpawnRuleDefine.txt");
+        this.SpawnRules = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnRuleDefine>>>(json);
+
+        json = File.ReadAllText(this.DataPath + "SkillDefine.txt");
+        this.Skills = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SkillDefine>>>(json);
+
+        json = File.ReadAllText(this.DataPath + "BuffDefine.txt");
+        this.Buffs = JsonConvert.DeserializeObject<Dictionary<int, BuffDefine>>(json);
 
     }
 
@@ -141,7 +152,19 @@ public class DataManager : Singleton<DataManager>
         this.SpawnRules = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnRuleDefine>>>(json);
         yield return null;
 
+        json = File.ReadAllText(this.DataPath + "RideDefine.txt");
+        this.Rides = JsonConvert.DeserializeObject<Dictionary<int, RideDefine>>(json);
 
+        yield return null;
+
+        json = File.ReadAllText(this.DataPath + "SkillDefine.txt");
+        this.Skills = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SkillDefine>>>(json);
+        yield return null;
+
+        json = File.ReadAllText(this.DataPath + "BuffDefine.txt");
+        this.Buffs = JsonConvert.DeserializeObject<Dictionary<int, BuffDefine>>(json);
+
+        yield return null;
 
         //json = File.ReadAllText(this.DataPath + "CharacterName.txt");
         //this.CharacterNames = JsonConvert.DeserializeObject<Dictionary<int, CharacterNameDefine>>(json);

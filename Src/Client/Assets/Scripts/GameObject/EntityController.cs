@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Entities;
 using Managers;
+using Assets.Scripts.Entities;
 /// <summary>
 /// 根据服务器发过来的数据驱动操作逻辑行为，其他的玩家对象
 /// </summary>
-public class EntityController : MonoBehaviour,IEntityNotify
+public class EntityController : MonoBehaviour,IEntityNotify,IEntityController
 { 
 
     public Animator anim;
@@ -29,11 +30,14 @@ public class EntityController : MonoBehaviour,IEntityNotify
 
     public bool isPlayer = false;//是不是玩家
 
-    //public RideController rideController;
+    public RideController rideController;
 
-    //private int currentRide = 0;
+    private int currentRide = 0;
 
-    //public Transform rideBone;
+    /// <summary>
+    /// 坐骑骨骼位置点
+    /// </summary>
+    public Transform rideBone;
 
     // Use this for initialization
     void Start () {
@@ -96,7 +100,7 @@ public class EntityController : MonoBehaviour,IEntityNotify
         Destroy(this.gameObject);
     }
 
-    public void OnEntityEvent(EntityEvent entityEvent/*, int param*/)
+    public void OnEntityEvent(EntityEvent entityEvent, int param)
     {
         switch(entityEvent)
         {
@@ -113,12 +117,73 @@ public class EntityController : MonoBehaviour,IEntityNotify
             case EntityEvent.Jump:
                 anim.SetTrigger("Jump");
                 break;
-                /*case EntityEvent.Ride:
-                    {
-                        this.Ride(param);
-                    }
-                    break;*/
+            case EntityEvent.Ride:
+                {
+                    this.Ride(param);
+                }
+                break;
         }
-        //if (this.rideController != null) this.rideController.OnEntityEvent(entityEvent, param);
+        ///我移动坐骑也移动
+        ///
+        if (this.rideController != null) this.rideController.OnEntityEvent(entityEvent, param);
+    }
+
+    public void Ride(int rideId)
+    {
+        if (currentRide == rideId) return;
+        currentRide = rideId;
+        ///上坐骑
+        if (rideId > 0)
+        {
+            this.rideController = GameObjectManager.Instance.LoadRide(rideId, this.transform);///设置坐骑和坐上去的位置
+        }
+
+        else
+        {
+            Destroy(this.rideController.gameObject);
+
+            this.rideController = null;
+        }
+
+        //下坐骑
+        if (this.rideController == null)
+        {
+            this.anim.transform.localPosition = Vector3.zero;
+            this.anim.SetLayerWeight(1, 0);/////设置权重
+        }
+        else
+        {
+            this.rideController.SetRider(this);////设置骑坐骑的人 着
+            this.anim.SetLayerWeight(1, 1);
+        }
+    }
+
+    /// <summary>
+    /// 坐骑蹦蹦跳跳的时候保证人物和坐骑始终在一起
+    /// </summary>
+    /// <param name="position"></param>
+    public void SetRidePosition(Vector3 position)
+    {
+        this.anim.transform.position = position + (this.anim.transform.position - this.rideBone.position);
+    }
+
+    void OnMouseDown()
+    {
+        Creature target=this.entity as Creature;///检查
+        if (target.IsCurrentPlayer)
+        {
+            return;
+        }
+        BattleManager.Instance.CurrentTarget = this.entity as Creature; 
+    }
+
+    public void PlayAnim(string name)
+    {
+        this.anim.SetTrigger(name);
+    }
+
+    public void SetStandby(bool standby)
+    {
+        this.anim.SetBool("Standby", standby);
     }
 }

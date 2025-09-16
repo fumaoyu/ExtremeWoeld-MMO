@@ -35,6 +35,8 @@
           <ScalarProperty Name="Level" ColumnName="Level" />
           <ScalarProperty Name="Exp" ColumnName="Exp" />
           <ScalarProperty Name="GuildID" ColumnName="GuildID" />
+          <ScalarProperty Name="HP" ColumnName="HP" />
+          <ScalarProperty Name="MP" ColumnName="MP" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

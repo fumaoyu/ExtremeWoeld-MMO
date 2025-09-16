@@ -651,5 +651,113 @@
     "SellPrice": 5,
     "StackLimit": 1,
     "Icon": "UI/Items/equip3017"
+  },
+  "8001": {
+    "ID": 8001,
+    "Name": "鸟语花香",
+    "Description": "\"治愈之力，可令枯木逢春，驱散一切负面诅咒\"",
+    "Type": "RIDE",
+    "Category": "坐骑",
+    "Level": 1,
+    "Price": 1000,
+    "SellPrice": 500,
+    "StackLimit": 1,
+    "Icon": "UI/Ride/Ride8001"
+  },
+  "8002": {
+    "ID": 8002,
+    "Name": "紫煌灭世龙",
+    "Description": "\"掌控湮灭法则，可释放撕裂空间的「煌灭吐息]\"",
+    "Type": "RIDE",
+    "Category": "坐骑",
+    "Level": 1,
+    "Price": 1000,
+    "SellPrice": 500,
+    "StackLimit": 1,
+    "Icon": "UI/Ride/Ride8002"
+  },
+  "8003": {
+    "ID": 8003,
+    "Name": "瑞祥麒麟 ",
+    "Description": "\"身覆玉质鳞甲，四足踏金云，鹿角缠绕祥瑞之气，鬃毛如流霞织锦。行过之处地涌甘泉、天降虹桥，额间「瑞印」能洞悉人心善恶，唯有至纯至善者方可近其身\"",
+    "Type": "RIDE",
+    "Category": "坐骑",
+    "Level": 1,
+    "Price": 1000,
+    "SellPrice": 500,
+    "StackLimit": 1,
+    "Icon": "UI/Ride/Ride8003"
+  },
+  "8004": {
+    "ID": 8004,
+    "Name": "雨之仙剑",
+    "Description": "\"并非生灵，而是一柄通灵古剑幻化的坐骑——剑身如寒潭凝露\"",
+    "Type": "RIDE",
+    "Category": "坐骑",
+    "Level": 3,
+    "Price": 1200,
+    "SellPrice": 600,
+    "StackLimit": 1,
+    "Icon": "UI/Ride/Ride8004"
+  },
+  "8005": {
+    "ID": 8005,
+    "Name": "知更鸟",
+    "Description": "\"啼鸣可唤醒沉睡的灵魂。传说它知晓世间所有秘密，只在黄昏与黎明交界时现身\"",
+    "Type": "RIDE",
+    "Category": "坐骑",
+    "Level": 4,
+    "Price": 1500,
+    "SellPrice": 750,
+    "StackLimit": 1,
+    "Icon": "UI/Ride/Ride8005"
+  },
+  "8006": {
+    "ID": 8006,
+    "Name": "九尾天狐",
+    "Description": "\"幻术主宰，九尾各具一法，雪色皮毛上浮现金色咒文，九尾摇曳时如月华倾泻\"",
+    "Type": "RIDE",
+    "Category": "坐骑",
+    "Level": 5,
+    "Price": 2000,
+    "SellPrice": 1000,
+    "StackLimit": 1,
+    "Icon": "UI/Ride/Ride8006"
+  },
+  "8007": {
+    "ID": 8007,
+    "Name": "熔岩之兽",
+    "Description": "\"形如巨犀，背甲龟裂处流淌炽金岩浆，蹄踏之地化为焦土。呼吸间喷吐硫磺烟云，怒吼时火山喷发相随。体内核心是一颗永恒燃烧的「地心火种」,可吸收岩浆无限再生。\"",
+    "Type": "RIDE",
+    "Category": "坐骑",
+    "Level": 2,
+    "Price": 1890,
+    "SellPrice": 1000,
+    "StackLimit": 1,
+    "Icon": "UI/Ride/Ride8007"
+  },
+  "8008": {
+    "ID": 8008,
+    "Name": "星空之王",
+    "Description": "\"身躯透明如夜幕，体内星辰流转构成星座图谱，双翼展开时似将银河披覆于身\"",
+    "Type": "RIDE",
+    "Category": "坐骑",
+    "Level": 4,
+    "Price": 1980,
+    "SellPrice": 560,
+    "StackLimit": 1,
+    "Icon": "UI/Ride/Ride8008"
+  },
+  "8009": {
+    "ID": 8009,
+    "Name": "水泽黑龙",
+    "Description": "\"龙鳞幽蓝如深海玄冰，脊刺如冰川棱柱，龙须似湍急暗流.\"",
+    "Type": "RIDE",
+    "Category": "坐骑",
+    "Level": 6,
+    "Price": 2300,
+    "SellPrice": 690,
+    "StackLimit": 1,
+    "Icon": "UI/Ride/Ride8009"
   }
 }

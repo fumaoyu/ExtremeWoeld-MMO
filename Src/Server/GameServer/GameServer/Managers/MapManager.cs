@@ -39,6 +39,8 @@ namespace GameServer.Managers
             }
         }
 
+
+       // public Battle Battle;
         /// <summary>
         /// 更新地图里面内容怪物等  自动
         /// </summary>

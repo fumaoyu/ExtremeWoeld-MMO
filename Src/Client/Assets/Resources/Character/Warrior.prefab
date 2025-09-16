@@ -86,6 +86,8 @@ MonoBehaviour:
   animSpeed: 1.5
   jumpPower: 3
   isPlayer: 0
+  rideController: {fileID: 0}
+  rideBone: {fileID: 1890450859102302885}
 --- !u!114 &1174445178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,12 +100,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06356aca64e08404b8f70d3657b8f706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 1890450859840768546}
+  rigidbody: {fileID: 0}
   rotateSpeed: 2
   turnAngle: 10
   speed: 0
   entityController: {fileID: 0}
   onAir: 0
+  navMeshAgent: {fileID: 0}
 --- !u!1001 &1890450859101906957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -151,6 +154,18 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 0f6f66c25b3e5cf4bae999569d09d9c4, type: 2}
+    - target: {fileID: 13700000, guid: def21edb286cffc45a98c9cf4578f185, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 65f14cd9e9e1cca45898e3bfad5b5861, type: 2}
+    - target: {fileID: 13700000, guid: def21edb286cffc45a98c9cf4578f185, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700002, guid: def21edb286cffc45a98c9cf4578f185, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 65f14cd9e9e1cca45898e3bfad5b5861, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: def21edb286cffc45a98c9cf4578f185, type: 3}
 --- !u!4 &1890450859102302933 stripped
@@ -162,6 +177,12 @@ Transform:
 --- !u!95 &1890450859109195117 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: def21edb286cffc45a98c9cf4578f185,
+    type: 3}
+  m_PrefabInstance: {fileID: 1890450859101906957}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1890450859102302885 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400040, guid: def21edb286cffc45a98c9cf4578f185,
     type: 3}
   m_PrefabInstance: {fileID: 1890450859101906957}
   m_PrefabAsset: {fileID: 0}

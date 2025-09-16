@@ -83,6 +83,8 @@
     <Property Name="Level" Type="int" Nullable="false" />
     <Property Name="Exp" Type="bigint" Nullable="false" />
     <Property Name="GuildID" Type="int" Nullable="false" />
+    <Property Name="HP" Type="int" Nullable="false" />
+    <Property Name="MP" Type="int" Nullable="false" />
     <Property Name="Player_ID" Type="int" Nullable="false" />
     <Property Name="CharacterBag_Id" Type="int" Nullable="false" />
   </EntityType>
@@ -356,6 +358,8 @@
           <Property Name="Exp" Type="Int64" Nullable="false" />
           <NavigationProperty Name="CharacterFriends" Relationship="ExtremeWorldModel.TCharacterTCharacterFriend" FromRole="TCharacter" ToRole="TCharacterFriend" />
           <Property Name="GuildID" Type="Int32" Nullable="false" />
+          <Property Name="HP" Type="Int32" Nullable="false" />
+          <Property Name="MP" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="PlayerCharacter">
           <End Type="ExtremeWorldModel.TPlayer" Role="Player" Multiplicity="1" />
@@ -537,6 +541,8 @@
           <ScalarProperty Name="Level" ColumnName="Level" />
           <ScalarProperty Name="Exp" ColumnName="Exp" />
           <ScalarProperty Name="GuildID" ColumnName="GuildID" />
+          <ScalarProperty Name="HP" ColumnName="HP" />
+          <ScalarProperty Name="MP" ColumnName="MP" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

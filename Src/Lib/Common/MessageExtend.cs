@@ -9,6 +9,11 @@ namespace SkillBridge.Message
 
     public static class MessageExtend
     {
+        /// <summary>
+        /// 扩展方法，this 加在形参前，静态方法
+        /// </summary>
+        /// <param name="self"></param>
+        /// <returns></returns>
         public static string String(this NVector3 self)
         {
             return string.Format("({0},{1},{2})", self.X, self.Y, self.Z);

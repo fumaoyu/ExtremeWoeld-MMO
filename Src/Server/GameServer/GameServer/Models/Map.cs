@@ -42,10 +42,14 @@ namespace GameServer.Models
         /// </summary>
         internal MapDefine Define;
 
+        //public  Battle Battle;
+
         /// <summary>
         /// 地图中的角色以characterid为key
         /// </summary>
         Dictionary<int, MapCharacter> MapCharacters = new Dictionary<int, MapCharacter>();
+
+
 
         /// <summary>
         /// 刷怪管理器
@@ -55,16 +59,20 @@ namespace GameServer.Models
         public MonsterManager monsterManager = new MonsterManager();
         /// 
 
+        public Battle.Battle Battle;
+
         internal Map(MapDefine define)
         {
             this.Define = define;
             this.spawnManager.Init(this);
             this.monsterManager.Init(this);//两个管理器初始化，把当前哪个地图传进去
+        this.Battle=new Battle.Battle(this);
         }
 
         internal void Update()
         {
             spawnManager.Update();////刷怪更新
+            Battle.Update();///战斗更新
         }
 
         /// <summary>
@@ -166,6 +174,7 @@ namespace GameServer.Models
             connection.Session.Response.mapCharacterLeave.entityId = character.entityId;
             connection.SendResponse();
         }
+
         /// <summary>
         /// 同步更新信息广播给当前地图的所有玩家
         /// </summary>
@@ -179,6 +188,11 @@ namespace GameServer.Models
                     item.Value.character.Position = entitySync.Entity.Position;
                     item.Value.character.Direction = entitySync.Entity.Direction;
                     item.Value.character.Speed = entitySync.Entity.Speed;
+
+                    if (entitySync.Event == EntityEvent.Ride)//坐骑
+                    {
+                        item.Value.character.Ride = entitySync.Param;////param是坐骑id
+                    }
                 }
                 else///其他玩家发送我的entity同步信息
                 {
@@ -189,7 +203,8 @@ namespace GameServer.Models
 
         public void MonsterEnter(Monster monster)
         {
-            Log.InfoFormat("MonsterEnter: Map{0}  monster:{1}", this.Define.ID, monster.Id);
+        
+            Log.InfoFormat("MonsterEnter: Map{0}  monster:{1}", this.Define.ID, monster.Info.Id);
 
             foreach (var character in  this.MapCharacters)///遍历地图是所有玩家，告诉TM有怪物加进来了
             {
@@ -212,6 +227,27 @@ namespace GameServer.Models
             }
             connection.Session.Response.mapCharacterEnter.Characters.Add(character);
             connection.SendResponse();//后面会改 
+        }
+
+        /// <summary>
+        /// 广播战斗响应,因为地图维护了当前所有在线的所有角色，你也可以用其他的来维护，或者自己实现一个管理器管理所有在线玩家
+        /// </summary>
+        /// <param name="response">其他玩家的response</param>
+        public void BroadcastBattleResponse(NetMessageResponse response)
+        {
+            foreach (var otherCharacter in this.MapCharacters)
+            {
+                if (response.skillCast != null)
+                {
+                    otherCharacter.Value.connection.Session.Response.skillCast = response.skillCast;
+                }
+                if (response.skillHits != null)
+                {
+                    otherCharacter.Value.connection.Session.Response.skillHits=response.skillHits;
+                }
+               
+                otherCharacter.Value.connection.SendResponse();
+            }
         }
     }
 }

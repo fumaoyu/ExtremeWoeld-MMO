@@ -72,7 +72,7 @@ namespace GameServer.Services
                 return;
             }
             TeleporterDefine source = DataManager.Instance.Teleporters[request.teleporterId];//从配置表中读出传送点数据
-            if (source.LinkTo == 0 || DataManager.Instance.Teleporters.ContainsKey(source.LinkTo))//判断表里面的连接点对不对
+            if (source.LinkTo == 0 ||! DataManager.Instance.Teleporters.ContainsKey(source.LinkTo))//判断表里面的连接点对不对
             {
                 Log.WarningFormat("Source TeleportID [{0}] LinkTo ID [{1}] not existed", request.teleporterId, source.LinkTo);
             }

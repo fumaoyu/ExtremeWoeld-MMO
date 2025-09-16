@@ -21,6 +21,8 @@ public class UIWindow : MonoBehaviour
 
     public virtual Type type { get { return this.GetType(); } }
 
+
+    public GameObject Root;
     /// <summary>
     /// 结果类型
     /// </summary>

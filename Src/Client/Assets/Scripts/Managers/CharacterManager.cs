@@ -10,6 +10,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Entities;
 using SkillBridge.Message;
+using Models;
 
 namespace Managers
 {
@@ -51,16 +52,24 @@ namespace Managers
             this.Characters.Clear();
         }
 
-        public void AddCharacter(SkillBridge.Message.NCharacterInfo cha)
+        public void AddCharacter(Character cha)
         {
-            Debug.LogFormat("AddCharacter:{0}:{1} Map:{2} Entity:{3}", cha.Id, cha.Name, cha.mapId, cha.Entity.String());
-            Character character = new Character(cha);
-            this.Characters[cha.EntityId] = character;
-            EntityManager.Instance.AddEntity(character);//添加到管理器中
+            Debug.LogFormat("AddCharacter:{0}:{1} Map:{2} Entity:{3}", cha.Id, cha.Name, cha.Info.mapId, cha.Info.Entity.String());
+            //Character character = new Character(cha);////重构
+            this.Characters[cha.entityId] = cha;
+            EntityManager.Instance.AddEntity(cha);//添加到管理器中
             if (OnCharacterEnter != null)
             {
-                OnCharacterEnter(character);
+                OnCharacterEnter(cha);
             }
+
+
+
+
+            //if (cha.EntityId == User.Instance.CurrentCharacterInfo.EntityId)///是不是当前角色
+            //{
+            //    User.Instance.CurrentCharacter = character;
+            //}
         }
 
 

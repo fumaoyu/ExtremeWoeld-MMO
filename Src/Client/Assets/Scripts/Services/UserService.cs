@@ -26,6 +26,7 @@ namespace Services
 
         bool connected = false;
 
+        bool isQuitGame = false;
         public UserService()//响应事件注册，根据服务器返回来的消息
         {
             NetClient.Instance.OnConnect += OnGameServerConnect;//游戏服务器连上
@@ -284,13 +285,13 @@ namespace Services
         }
         public void SendGameEnter(int characterId)
         {
-            Debug.LogFormat("SendGameEnter:{0}", characterId);
+            Debug.LogFormat("SendGameEnter:characterId:{0}", characterId);
             NetMessage netMessage = new NetMessage();
             netMessage.Request = new NetMessageRequest();
             netMessage.Request.gameEnter = new UserGameEnterRequest();
 
 
-          
+          ChatManager.Instance.Init();///退出场景在回来的时候
 
 
             netMessage.Request.gameEnter.characterIdx = characterId;
@@ -317,7 +318,7 @@ namespace Services
             {
                 if (message.Character != null)
                 {
-                    User.Instance.CurrentCharacter = message.Character;
+                    User.Instance.CurrentCharacterInfo = message.Character;
 
                     ItemManager.Instance.Init(message.Character.Items);//初始化道具
                     BagManager.Instance.Init(message.Character.Bag);//初始化背包
@@ -335,20 +336,25 @@ namespace Services
         {
             //throw new NotImplementedException();
             Debug.LogFormat("MapCharacterEnter: {0}", message.mapId);
-            Debug.LogFormat("当前玩家信息 名字:{0}  Id:{1}", User.Instance.CurrentCharacter.Name, User.Instance.CurrentCharacter.Id);
+            Debug.LogFormat("当前玩家信息 名字:{0}  Id:{1}", User.Instance.CurrentCharacterInfo.Name, User.Instance.CurrentCharacterInfo.Id);
             NCharacterInfo info = message.Characters[0];//因为返回的就是当前一个角色
 
             Debug.LogFormat("当前玩家信息 名字:{0}  Id:{1}", info.Name, info.Id);
 
-            User.Instance.CurrentCharacter = info; 
+            User.Instance.CurrentCharacterInfo = info; 
             SceneManager.Instance.LoadScene(DataManager.Instance.Maps[message.mapId].Resource);
+            AudioManager.Instance.PlayMusic(DataManager.Instance.Maps[message.mapId].Music);
         }
         void OnSecondTest(object sender, SenondTestRespose message)
         {
             Debug.LogFormat("OnSecondTestResponse {0}|| 结果  {1}" , message.sName, message.Result);
         }
-        public void SendGameLeave()
+
+
+        public void SendGameLeave(bool isquitGAME=false)
         {
+            this.isQuitGame = isquitGAME;
+
             Debug.LogFormat("UserGameLeaveRequest");
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
@@ -383,7 +389,16 @@ namespace Services
             Debug.LogFormat("OnGameLeave: {0}  [{1}] ", message.Result, message.Errormsg);
             //离开地图id重新设置为零
             MapService.Instance.CurrentMapId = 0;
+            User.Instance.CurrentCharacterInfo = null;
             User.Instance.CurrentCharacter = null;
+            if (this.isQuitGame)
+            {
+#if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+#else
+              Application.Quit();////打包之后
+#endif
+            }
         }
 
 

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Services;
 using SkillBridge.Message;
+using Managers;
 
 public class UILogin : MonoBehaviour {
 
@@ -48,6 +49,7 @@ public class UILogin : MonoBehaviour {
             //登录成功，进入角色选择
             //MessageBox.Show("登录成功,准备角色选择" + message,"提示", MessageBoxType.Information);
             SceneManager.Instance.LoadScene("CharSelect");
+            AudioManager.Instance.PlayMusic(SoundDefine.Music_Select);
 
         }
         else

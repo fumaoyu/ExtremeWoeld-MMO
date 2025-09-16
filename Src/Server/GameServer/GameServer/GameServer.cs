@@ -29,7 +29,7 @@ namespace GameServer
             network.Init(Port);
             DBService.Instance.Init();
             UserService.Instance.Init();
-            thread = new Thread(new ThreadStart(this.Update));
+            
             DataManager.Instance.Load();
           //  MapManager.Instance.Init();
 
@@ -45,6 +45,9 @@ namespace GameServer
             FriendService.Instance.Init();
             TeamService.Instance.Init();
             GuildService.Instance.Init();
+            ChatService.Instance.Init();
+            BattleServive.Instance.Init();
+            thread = new Thread(new ThreadStart(this.Update));
             return true;
         }
 

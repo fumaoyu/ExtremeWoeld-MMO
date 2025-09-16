@@ -3,10 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 namespace Managers
 {
-    class NpcManager:Singleton<NpcManager>
+    class NpcManager : Singleton<NpcManager>
     {
         public delegate bool NpcActionHandler(NpcDefine npc);
 
@@ -15,6 +16,8 @@ namespace Managers
         /// </summary>
         Dictionary<NpcFunction, NpcActionHandler> eventMap = new Dictionary<NpcFunction, NpcActionHandler>();
 
+
+        Dictionary<int, Vector3> NpcPosition = new Dictionary<int, Vector3>();
         /// <summary>
         ///根据npc功能添加事件委托..注册
         /// </summary>
@@ -35,7 +38,7 @@ namespace Managers
             NpcDefine npc = null;
             DataManager.Instance.Npcs.TryGetValue(id, out npc);//这样写为了安全
             return npc;
-         // return DataManager.Instance.Npcs[id];
+            // return DataManager.Instance.Npcs[id];
         }
 
         /// <summary>
@@ -53,7 +56,7 @@ namespace Managers
             return false;
         }
 
-        public  bool Interactive(NpcDefine npc)
+        public bool Interactive(NpcDefine npc)
         {
             if (DoTaskInteractive(npc))//任务型npc、、、、、、、、、、、、
             {
@@ -100,6 +103,15 @@ namespace Managers
             return eventMap[npc.Function](npc);
         }
 
-  
+        public void UpdateNpcPosition(int npc, Vector3 pos)
+        {
+            this.NpcPosition[npc] = pos;
+        }
+
+        public Vector3 GetNpcPosition(int npc)
+        {
+            return this.NpcPosition[npc];
+
+        }
     }
 }

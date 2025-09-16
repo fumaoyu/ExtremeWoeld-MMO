@@ -1,8 +1,10 @@
 ﻿
+
 using Entities;
+using JetBrains.Annotations;
 using Managers;
 using Models;
-using System;
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -96,12 +98,19 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
     {
         go.transform.position = GameObjectTool.LogicToWorld(character.position);//坐标转换
         go.transform.forward = GameObjectTool.LogicToWorld(character.direction);
+
         this.Character[character.entityId] = go;
         EntityController entityController = go.GetComponent<EntityController>();
         if (entityController != null)
         {
             entityController.entity = character;
             entityController.isPlayer = character.IsCurrentPlayer;
+
+
+            entityController.Ride(character.Info.Ride);
+
+            character.Controller = (Assets.Scripts.Entities.IEntityController)entityController;
+
         }
         PlayerInputController playerInputController = go.GetComponent<PlayerInputController>();
         if (playerInputController != null)
@@ -110,7 +119,7 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
             // if (character.Info.Id == Models.User.Instance.CurrentCharacter.Id)//当前角色
             if (character.IsCurrentPlayer)
             {
-                User.Instance.CurrentCharacterObject = go;//当前游戏对象
+                User.Instance.CurrentCharacterObject = playerInputController;//当前游戏对象
 
                 MainPlayerCamera.Instance.player = go;
                 playerInputController.enabled = true;
@@ -121,7 +130,31 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
             {
                 playerInputController.enabled = false;
             }
+            
         }
+
+       
+    }
+
+    /// <summary>
+    /// 加载坐骑
+    /// </summary>
+    /// <param name="rideId"></param>
+    /// <param name="parent"></param>
+    /// <returns></returns>
+    public RideController LoadRide(int rideId, Transform parent)
+    {
+        var rideDefine = DataManager.Instance.Rides[rideId];
+        UnityEngine.Object obj = Resloader.Load<UnityEngine.Object>(rideDefine.Resource); 
+        if (obj == null)
+        {
+            Debug.LogErrorFormat("坐骑加载为空，Ride[{0}]  Resource:[{1} not existed]", rideDefine.ID, rideDefine.Resource);
+            return null;
+        }
+
+        GameObject go = (GameObject)Instantiate(obj, parent);
+        go.name = "Ride_" + rideDefine.ID + "_" + rideDefine.Name;
+        return go.GetComponent<RideController>();
     }
 }
 

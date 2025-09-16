@@ -48,10 +48,18 @@ public class LoadingManager : MonoBehaviour {
         FriendService.Instance.Init();
 
         TeamService.Instance.Init();
+
+        GuildService.Instance.Init();//公会
+
+        ChatService.Instance.Init();
+
+        BattleServive.Instance.Init();
+        AudioManager.Instance.PlayMusic(SoundDefine.Music_Login);
         // Fake Loading Simulate
+        progressBar.value = 0;
         for (float j = 0; j <100;j++)
         {
-            float i = Random.Range(0f,0.03f);
+            float i = Random.Range(0f,0.3f);
             if (progressBar.value >= 1)
             {
                 progressBar.value = 1;
@@ -62,8 +70,8 @@ public class LoadingManager : MonoBehaviour {
                 //Debug.Log("进度条" + );
                 //Debug.Log("进度条" + );
             progressBar.value += i;
-            progressText.text =((int)(progressBar.value*1000)/10)+","+ ((int)(progressBar.value * 1000)%10) + "%";
-            yield return new WaitForSeconds(Random.Range(0f,0.2f));
+            progressNumber.text =((int)(progressBar.value*1000)/10)+","+ ((int)(progressBar.value * 1000)%10) + "%";
+            yield return new WaitForSeconds(Random.Range(0f,0.3f));
         }
         UILoading.SetActive(false);
         UILogin.SetActive(true);

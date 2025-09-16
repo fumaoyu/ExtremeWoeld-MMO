@@ -50,8 +50,8 @@ public class UIShop : MonoBehaviour
     {
         this.shop = shop;
         this.title.text = shop.Name;
-        this.gold.text = User.Instance.CurrentCharacter.Gold.ToString();
-        this.diamond.text=User.Instance.CurrentCharacter.Diamond.ToString();
+        this.gold.text = User.Instance.CurrentCharacterInfo.Gold.ToString();
+        this.diamond.text=User.Instance.CurrentCharacterInfo.Diamond.ToString();
     }
     // Update is called once per frame
     void Update()

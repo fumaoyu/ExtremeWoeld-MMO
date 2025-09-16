@@ -37,6 +37,7 @@ enum CHARACTER_STATE
 	MOVE = 1;
 }
 
+///状态
 enum ENTITY_EVENT
 {
 	NONE = 0;
@@ -44,6 +45,7 @@ enum ENTITY_EVENT
 	MOVE_FWD = 2;
 	MOVE_BACK = 3;
 	JUMP = 4;
+	RIDE=5;//骑行
 }
 
 enum ITEM_TYPE
@@ -52,6 +54,7 @@ enum ITEM_TYPE
    NATERIAL=1;
    TASK=2;//任务道具	
    EQUIP=3;//装备
+   RIDE=4;///坐骑
 }
 
 enum EQUIP_SLOT
@@ -84,24 +87,44 @@ message NCharacterInfo {
 	CHARACTER_TYPE type = 5;
 	CHARACTER_CLASS class = 6;
 	int32 level = 7;
-	int32 mapId = 8;
-	NEntity entity = 9;
-	int64 gold = 10;
+	int32 exp=8;
+	NAttributeDynamic attributeDynamic=9;//动态属性
+	int32 mapId = 10;
+	NEntity entity = 11;
+	int64 gold = 12;
 
-	repeated NItemInfo Items=11;//道具信息,丢这里方便用户登录的时候就可以知道自己身上所有的道具
-	NBagInfo Bag=12;//背包
-	int32 diamond=13;//钻石
-	bytes Equips=14;//装备数据
-	repeated NQuestInfo quests=15;//任务信息
-	repeated NFriendInfo friends=16;//好友信息
+	repeated NItemInfo Items=13;//道具信息,丢这里方便用户登录的时候就可以知道自己身上所有的道具
+	NBagInfo Bag=14;//背包
+	int32 diamond=15;//钻石
+	bytes Equips=16;//装备数据
+	repeated NQuestInfo quests=17;//任务信息
+	repeated NFriendInfo friends=18;//好友信息
 
-	NGuildInfo guild=17;//公会信息
+	
+
+	NGuildInfo guild=19;//公会信息
+	int32 ride=20;//坐骑id
+
+	repeated NSkillInfo Skills=21;
 }
+
+message NAttributeDynamic
+{
+	int32 HP=1;
+ 	int32 MP=2;
+}
+
 
 message  NItemInfo
 {
 	int32 id=1;//单个道具id
 	int32 count =2;//单个道具数量
+}
+
+message NSkillInfo
+{
+      int32 id=1;
+	  int32 level=2;	
 }
 
 
@@ -134,6 +157,7 @@ enum STATUS_TYPE
 	SKILL_POINT=2;
 	ITEM=3;
 	DIAMOND=4;
+	LEVEL=5;
 }
 ///暂时不用
 enum STATUS_SOURCE
@@ -181,7 +205,7 @@ message NEntitySync {
 	int32 id = 1;
 	ENTITY_EVENT event = 2;
 	NEntity entity = 3;
-	
+	int32 param=4;///
 }
 
 
@@ -235,7 +259,13 @@ message NetMessageRequest{
 	GuildRequest guild=27;
 	GuildLeaveRequest guildLeave=28;
 	GuildListRequest guildList=29;
-    
+
+    GuildAdminRequest  guildAdmin=30;
+
+	ChatRequest chat=31;
+
+	SkillCastRequest skillCast=50;
+
     //NGuildInfo guild=2
 
     SenondTestRequest SenondTest=99;
@@ -277,6 +307,13 @@ message NetMessageResponse{
 	GuildResponse guild=27;
 	GuildLeaveResponse guildLeave=28;
 	GuildListResponse guildList=29;
+
+	GuildAdminResponse  guildAdmin=30;
+
+	ChatResponse chat=31;
+
+	SkillCastResponse skillCast=50;
+	SkillHitResponse skillHits=51;
 
     SenondTestRespose SenondTest=98;
 	StatusNotify statusNotify=99;
@@ -720,7 +757,71 @@ message GuildLeaveResponse
   
 }
 
+///公会管理
+ enum GUILD_ADMIIN_COMMAND
+{
+	KICKOUT=1;///踢人
+	PROMOTE=2;//晋升
+	DEPOST=3;///罢免
+	TRANSFER=4;///转让会长
+}
 
+message GuildAdminRequest
+{
+	GUILD_ADMIIN_COMMAND command=1;
+	int32 target=2;
+
+}
+
+message GuildAdminResponse
+{
+   RESULT result=1;
+   string errormsg=2;
+   GuildAdminRequest command=3;
+}
+
+
+///聊天系统
+enum CHAT_CHANNEL///////////频道，这么设计是为了每一个频道都可以得到2的n次方，任意频道都可以组合，二进制每一位都只有一个1，在不同位置上，与也是不一样的
+{
+	ALL=-1;
+	LOCAL=1;
+	WORLD=2;
+	SYSTEM=4;
+	PRIVATE=8;
+	TEAM=16;
+	GUILD=32;
+}
+
+message ChatMessage
+{
+   CHAT_CHANNEL channel=1;////聊天频道
+   int32 id=2;//////信息id
+   int32 form_id=3;
+   string from_name=4;
+   int32 to_id=5;
+   string to_name=6;
+   string message=7;////信息内容
+   double time=8;	
+}
+
+message ChatRequest
+{
+	ChatMessage chatMessage=1;
+}
+
+message ChatResponse 
+{
+	RESULT result=1;
+	string errormsg=2;
+	repeated ChatMessage localMessage=3;
+	repeated ChatMessage worldMessage=4;
+	repeated ChatMessage systemMessage=5;
+	repeated ChatMessage privateMessage=6;
+	repeated ChatMessage teamMessage=7;
+	repeated ChatMessage guildMessage=8;
+
+}
 
 ///自己写的测试
 message SenondTestRequest
@@ -734,3 +835,80 @@ message SenondTestRespose
   RESULT result=1;
   string sName=2;	
 }
+
+///////////Battle
+// enum SkillType
+// {
+   //     Normal=1;
+   //     Skill=2;
+
+  //  }
+// enum TargetType
+  //  {
+	////	None=1;
+     //   Target=2;  
+    //    self=3;
+   //     Position=4;
+  //  }
+
+enum SKILL_RESULT
+    {
+        OK=0;  ////成功
+		OUT_OF_MP=1;     ///本地		      /// <summary>
+        COOL_DOWN=2;     ///冷却中
+        INVALID_TARGET=3;   ///无效目标
+        OUT_PF_RANGE=4;///目标超出范围
+        CASTING=5;    //技能正在释放中
+    }
+
+enum  SKILL_STATUS
+{
+		NONE=0;
+		CASTING=1;  //施法中
+		RUNNING=2;///执行中
+}
+	message NSkillCastInfo
+	{
+		int32 skillId=1;//技能id
+		int32 casterId=2;///施法者
+		int32 targetId=3;//目标
+		NVector3 position=4;//点
+	}
+message NDamageInfo
+{
+	int32  entityID=1;///entityId
+	int32  damage=2;//伤害
+	bool crit=3;//暴击
+	bool will_dead=4;  //此次伤害之后是否死亡
+}
+
+message NSkillHitInfo
+{
+	int32 skillId=1;
+	int32 casterId=2;
+	int32 hitId=3;
+	repeated  NDamageInfo damages=4;
+}
+
+	message SkillCastRequest
+	{
+		NSkillCastInfo castInfo=1;
+	}
+
+	message SkillCastResponse
+	{
+		RESULT result=1;
+		string errormsg=2;
+		NSkillCastInfo castInfo=3;
+		NDamageInfo damage=4;
+	}
+
+	message  SkillHitResponse
+	{
+		RESULT result=1;
+		string errormsg=2;
+		repeated NSkillHitInfo hits=3;
+	}
+
+
+	 

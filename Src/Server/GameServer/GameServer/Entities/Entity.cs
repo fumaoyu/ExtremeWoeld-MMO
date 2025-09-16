@@ -90,5 +90,9 @@ namespace GameServer.Entities
             throw new NotImplementedException();
         }
 
+        public virtual void Update()
+        {
+           
+        }
     }
 }

@@ -1,38 +1,42 @@
 {
   "1": {
     "ID": 1,
-    "Name": "中州",
+    "Name": "中州城",
     "Type": "Normal",
     "SubType": "Normal",
     "PKMode": false,
     "Resource": "MainCity",
-    "MiniMap": "zhongzhou"
+    "MiniMap": "zhongzhoucheng",
+    "Music": "bgm-town"
   },
   "2": {
     "ID": 2,
-    "Name": "日落之森",
+    "Name": "落日深林",
     "Type": "Normal",
     "SubType": "Normal",
     "PKMode": false,
     "Resource": "Map01",
-    "MiniMap": "riluozhisen"
+    "MiniMap": "luorisenlin",
+    "Music": "bgm-map01"
   },
   "3": {
     "ID": 3,
-    "Name": "蛮荒",
+    "Name": "落日森林",
     "Type": "Normal",
     "SubType": "Normal",
     "PKMode": false,
     "Resource": "Map02",
-    "MiniMap": "manhuang"
+    "MiniMap": "luorisenlin",
+    "Music": "bgm-map02"
   },
   "4": {
     "ID": 4,
-    "Name": "遗落大陆",
+    "Name": "熔岩之地",
     "Type": "Normal",
     "SubType": "Normal",
     "PKMode": false,
     "Resource": "Map03",
-    "MiniMap": "yiluodalu"
+    "MiniMap": "anhunmigong",
+    "Music": "bgm-map03"
   }
 }

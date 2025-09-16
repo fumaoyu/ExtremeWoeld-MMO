@@ -14,19 +14,49 @@ namespace GameServer
             while (run)
             {
                 Console.Write(">");
-                string line = Console.ReadLine();
-                switch (line.ToLower().Trim())
+                string line = Console.ReadLine().ToLower().Trim();
+                Console.Write(line);
+                try
                 {
-                    case "exit":
-                        run = false;
-                        break;
-                    default:
-                        Help();
-                        break;
+                    string[] cmd = line.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);//空格拆分
+                    switch (cmd[0])
+                    {
+
+                        case "addexp":
+                            AddExp(int.Parse(cmd[1]), int.Parse(cmd[2]));
+                            break;
+                        case "exit":
+                            run = false;
+                            break;
+                       
+                        default:
+                            Help();
+                            break;
+                    }
                 }
+                catch (Exception ex)
+                {
+                    Console.Error.WriteLine(ex.ToString());
+                }
+               
             }
         }
 
+        /// <summary>
+        /// 在线玩家加经验包
+        /// </summary>
+        /// <param name="characterId"></param>
+        /// <param name="exp"></param>
+        public static void AddExp(int characterId, int exp)
+        {
+            var cha = Managers.CharacterManager.Instance.GetCharacter(characterId);
+            if (cha == null)
+            {
+                Console.WriteLine("CharacterId {0} not found", characterId);
+                return;
+            }
+            cha.AddExp(exp);
+        }
         public static void Help()
         {
             Console.Write(@"

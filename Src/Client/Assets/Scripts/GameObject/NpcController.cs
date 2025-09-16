@@ -36,6 +36,8 @@ public class NpcController : MonoBehaviour
         origincolor = renderer.sharedMaterial.color; 
         npcDefine = NpcManager.Instance.GetNpcDefine(NpcId);
 
+        NpcManager.Instance.UpdateNpcPosition(this.NpcId, this.transform.position);
+
         this.StartCoroutine(Actions());
 
         RefreshNpcStatus();//打开初始化
@@ -138,6 +140,12 @@ public class NpcController : MonoBehaviour
     /// </summary>
     void OnMouseDown()
     {
+        ///鼠标点击npc,判断一下距离，再确定是不是寻路
+        if (Vector3.Distance(this.transform.position, User.Instance.CurrentCharacterObject.transform.position) > 2f)
+        {
+            User.Instance.CurrentCharacterObject.StartNav(this.transform.position);
+        }
+
         Interactive();
     }
     /// <summary>
@@ -170,9 +178,9 @@ public class NpcController : MonoBehaviour
     {
         if (islight)
         {
-            if (renderer.sharedMaterial.color != Color.blue)
+            if (renderer.sharedMaterial.color != Color.red)
             {
-                renderer.sharedMaterial.color = Color.blue;
+                renderer.sharedMaterial.color = Color.red;
             }
 
         }

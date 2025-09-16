@@ -10,8 +10,9 @@ namespace Managers
     interface IEntityNotify//接口加事件，接口实现的事件
     {
         void OnEntityRemoved();
-        void OnEntityChanged(Entity entity);
-        void OnEntityEvent(EntityEvent @event);
+        void OnEntityEvent(EntityEvent @event, int param);
+        void OnEntityChanged(Entity entity);//zli
+       
     }
     class EntityManager : Singleton<EntityManager>
     {
@@ -60,9 +61,17 @@ namespace Managers
                     ///两个通知 ，自己的一个事件通知
                     ///
                     notifiers[entity.entityId].OnEntityChanged(entity);//entity数据变了
-                    notifiers[entity.entityId].OnEntityEvent(data.Event);//entity状态发生改变了
+
+                    notifiers[entity.entityId].OnEntityEvent(data.Event,data.Param);//entity状态发生改变了
                 }
             }
+        }
+
+        public  Entity GetEntity(int casterId)
+        {
+            Entity entity = null;
+            entities.TryGetValue((int)casterId, out entity);
+            return entity;
         }
     }
 }

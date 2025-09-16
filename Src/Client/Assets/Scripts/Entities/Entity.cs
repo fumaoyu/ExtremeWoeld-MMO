@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using SkillBridge.Message;
+using Assets.Scripts.Entities;
 
 namespace Entities
 {
@@ -20,6 +21,7 @@ namespace Entities
         public int speed;
 
 
+        public IEntityController Controller;
         /// <summary>
         /// 
         /// </summary>

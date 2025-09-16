@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Managers;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,10 +41,16 @@ public class UIManager : Singleton<UIManager>
         this.UIResources.Add(typeof(UIFriend), new UIElement() { Resources = "UI/UIFriends", Cache = false });//任务对话界面
         this.UIResources.Add(typeof(UIGuild), new UIElement() { Resources = "UI/Guild/UIGuild", Cache = false });//自己的公会界面
         this.UIResources.Add(typeof(UIGuildList), new UIElement() { Resources = "UI/Guild/UIGuildList", Cache = false });//公会列表界面
-        this.UIResources.Add(typeof(UIGuildPopNoGuild), new UIElement() { Resources = "UI/Guild/UIGuiledPopNoGuild", Cache = false });//没有公会界面
+        this.UIResources.Add(typeof(UIGuildPopNoGuild), new UIElement() { Resources = "UI/Guild/UIGuildPopNoGuild", Cache = false });//没有公会界面
         this.UIResources.Add(typeof(UIGuildPopCreate), new UIElement() { Resources = "UI/Guild/UIGuildPopCreate", Cache = false });//创建界面
+        this.UIResources.Add(typeof(UIGuildApplyList), new UIElement() { Resources = "UI/Guild/UIGuildPopApplyList", Cache = false });//创建界面
+        this.UIResources.Add(typeof(UISetting), new UIElement() { Resources = "UI/UISetting", Cache = false });//设置界面
+        this.UIResources.Add(typeof(UIPopChatMenu), new UIElement() { Resources = "UI/UIPopChatMenu", Cache = false });//聊天界面
+        this.UIResources.Add(typeof(UIChat), new UIElement() { Resources = "UI/UIChat", Cache = false });//聊天界面
+        this.UIResources.Add(typeof(UIRide), new UIElement() { Resources = "UI/UIRide", Cache = false });//坐骑
+        this.UIResources.Add(typeof(UISystemConfig), new UIElement() { Resources = "UI/UISystemConfig", Cache = false });//音乐设置界面
+        this.UIResources.Add(typeof(UISkill), new UIElement() { Resources = "UI/UISkill", Cache = false });//技能
     }
-
     ~UIManager()
     {
     }
@@ -55,7 +62,8 @@ public class UIManager : Singleton<UIManager>
     /// <returns></returns>
     public T Show<T>()
     {
-       // SoundManager.Instance.PlaySound("ui_open");
+       AudioManager.Instance.PlaySound(SoundDefine.SFX_UI_Open);
+
         Type type = typeof(T);//类型
         if (this.UIResources.ContainsKey(type))
         {
@@ -79,9 +87,17 @@ public class UIManager : Singleton<UIManager>
         return default(T);
     }
 
+    public  void Close<T>()
+    {
+        Close(typeof(T));
+        //int a = 0;
+        //Debug.LogWarning(typeof(int));
+         
+    }
+
     public void Close(Type type)
     {
-        // SoundManager.Instance.PlaySound("ui_close");
+         AudioManager.Instance.PlaySound(SoundDefine.SFX_UI_Close);
 
         if (this.UIResources.ContainsKey(type))
         {

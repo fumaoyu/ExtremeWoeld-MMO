@@ -86,6 +86,8 @@ MonoBehaviour:
   animSpeed: 1.5
   jumpPower: 3
   isPlayer: 0
+  rideController: {fileID: 0}
+  rideBone: {fileID: 3990286607498917293}
 --- !u!114 &1210865356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,12 +100,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06356aca64e08404b8f70d3657b8f706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 3990286607017089143}
+  rigidbody: {fileID: 0}
   rotateSpeed: 2
   turnAngle: 10
   speed: 0
   entityController: {fileID: 0}
   onAir: 0
+  navMeshAgent: {fileID: 0}
 --- !u!1001 &3990286607499308907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -154,7 +157,11 @@ PrefabInstance:
     - target: {fileID: 13700000, guid: c9d8afea1d6f5614485dd29f43645b28, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5944bf50bf156fd48828eaca29f72fc9, type: 2}
+      objectReference: {fileID: 2100000, guid: f6988b82c211c2c41880d2a6ee984c73, type: 2}
+    - target: {fileID: 13700002, guid: c9d8afea1d6f5614485dd29f43645b28, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f6988b82c211c2c41880d2a6ee984c73, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9d8afea1d6f5614485dd29f43645b28, type: 3}
 --- !u!4 &3990286607498917355 stripped
@@ -166,6 +173,12 @@ Transform:
 --- !u!95 &3990286607489849867 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: c9d8afea1d6f5614485dd29f43645b28,
+    type: 3}
+  m_PrefabInstance: {fileID: 3990286607499308907}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3990286607498917293 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400070, guid: c9d8afea1d6f5614485dd29f43645b28,
     type: 3}
   m_PrefabInstance: {fileID: 3990286607499308907}
   m_PrefabAsset: {fileID: 0}

@@ -150,9 +150,10 @@ namespace GameServer.Services
                 MapPosY = 4000,
                 MapPosZ = 820,
                 Gold = 54000,
-                Diamond=980,
-                Equips=new byte[28]
-                
+                Diamond = 980,
+                Equips = new byte[28],
+                HP = 1000,
+                MP = 1000
             };
 
             var bag = new TCharacterBag();
@@ -286,7 +287,8 @@ namespace GameServer.Services
             Log.InfoFormat("UserGameLeaveRequest: charactetID:{0} Name:{1}  MapID:{2}", character.Id, character.Info.Name, character.Info.mapId);
 
             CharacterLeave(character);
-            SessionManager.Instance.RemoveSession(character.Id);
+
+            //SessionManager.Instance.RemoveSession(character.Id);
             //NetMessage message = new NetMessage();
             //message.Response = new NetMessageResponse();
             //message.Response.gameLeave = new UserGameLeaveResponse();
@@ -306,6 +308,8 @@ namespace GameServer.Services
         public   void CharacterLeave(Character character)
         {
             Log.InfoFormat("CharacterLeave: characterID:{0}  Name:{1}", character.Id, character.Info.Name);
+            SessionManager.Instance.RemoveSession(character.Id);
+
             CharacterManager.Instance.RemoveCharacter(character.Id);//从角色管理器中拿出
             character.Claer();//把自己信息clear,提前了一行
             MapManager.Instance[character.Info.mapId].CharacterLeave(character);//从地图中删除

@@ -48,10 +48,17 @@ namespace Network
             if (message.guildList != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.guildList); };
             if (message.Guild != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.Guild); };
 
+            if (message.guildAdmin != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.guildAdmin); };
+
+            if (message.Chat != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.Chat); };
+
+
+            if (message.skillCast != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.skillCast); }
+            if (message.skillHits != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.skillHits); }
 
             if (message.SenondTest != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.SenondTest); };
 
-
+           
 
             //if (message.bagSave!= null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.bagSave); }
         }
@@ -97,7 +104,16 @@ namespace Network
             if (message.guildList != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.guildList); };
             if (message.Guild != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.Guild); };
 
+            if (message.guildAdmin != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.guildAdmin); };
+
+            if (message.Chat != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.Chat); };
+
+
+            if (message.skillCast != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.skillCast); }
+            
+
             if (message.SenondTest != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.SenondTest); };
+
         }
 }
 }

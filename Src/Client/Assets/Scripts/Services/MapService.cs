@@ -1,5 +1,6 @@
 ﻿
 using Common.Data;
+using Entities;
 using Managers;
 using Models;
 using Network;
@@ -46,19 +47,33 @@ namespace Services
             foreach (var characters in message.Characters)
             {
 
-                if ( User.Instance .CurrentCharacter ==null|| (characters.Type==CharacterType.Player&& User.Instance.CurrentCharacter.Id == characters.Id))
+                if ( User.Instance .CurrentCharacterInfo ==null|| (characters.Type==CharacterType.Player&& User.Instance.CurrentCharacterInfo.Id == characters.Id))
                 {
                     //当前角色切换地图
-                    User.Instance.CurrentCharacter = characters;//为什么一样还要赋值，为了安全一下万一服务器数据发生改变，刷新一下数据
+                    User.Instance.CurrentCharacterInfo = characters;//为什么一样还要赋值，为了安全一下万一服务器数据发生改变，刷新一下数据
+                    if (User.Instance.CurrentCharacter == null)///第一次进入游戏，没有实体才重新new一个
+                    {
+                        User.Instance.CurrentCharacter = new Entities.Character(characters);
+                    }
+                    else
+                    {
+                        User.Instance.CurrentCharacter.UpdateInfo(characters);
+                    }
+
+                    User.Instance.CharacterInited();
+
+                    CharacterManager.Instance.AddCharacter(User.Instance.CurrentCharacter);//把服务器返回的所有角色交给角色管理器
                     Debug.LogFormat("OnMapCharacterEnter当前玩家信息名字：{0} ID：{1}", characters.Name, characters.Id);
+                    continue;
                 }
-                CharacterManager.Instance.AddCharacter(characters);//把服务器返回的所有角色交给角色管理器
+                CharacterManager.Instance.AddCharacter(new Character(characters));
             }
 
             if (CurrentMapId != message.mapId)//记录一下之前是不是这个地图，还是切换地图了
             {
                 this.EnterMap(message.mapId);
                 this.CurrentMapId = message.mapId;
+                AudioManager.Instance.PlayMusic(DataManager.Instance.Maps[message.mapId].Music);
             }
         }
 
@@ -82,7 +97,7 @@ namespace Services
         {
             Debug.LogFormat("OnMapCharacterLeave: charID :{0}", message.entityId);
 
-            if (message.entityId != User.Instance.CurrentCharacter.EntityId)//如果是其他玩家离开，清除其他玩家
+            if (message.entityId != User.Instance.CurrentCharacterInfo.EntityId)//如果是其他玩家离开，清除其他玩家
             {
                 CharacterManager.Instance.RemoveCharacter(message.entityId);
             }
@@ -91,7 +106,7 @@ namespace Services
 
         }
 
-        internal void SendMapEntitySyne(EntityEvent entityEvent, NEntity entityData)
+        internal void SendMapEntitySyne(EntityEvent entityEvent, NEntity entityData,int param)
         {
            // Debug.LogFormat("OnMapEntityRequest: ID :{0}  POS:{1}  DIR: {2}  SPD：{3}", entityData.Id, entityData.Position.String(), entityData.Direction.String(), entityData.Speed); ;
             NetMessage netMessage = new NetMessage();
@@ -101,7 +116,10 @@ namespace Services
             {
                 Id = entityData.Id,
                 Event = entityEvent,
-                Entity = entityData
+                Entity = entityData,
+
+                Param = param//这个参数后面加的坐骑的时候加的
+                
             };
              NetClient.Instance.SendMessage(netMessage);
         }
